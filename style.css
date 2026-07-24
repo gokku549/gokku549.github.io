@@ -97,3 +97,12 @@ section{
 }
 
 }
+
+.translation-banner{
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
