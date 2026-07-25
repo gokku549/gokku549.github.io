@@ -106,3 +106,10 @@ section{
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+.kids-banner {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
