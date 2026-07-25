@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Numbers 1-20 | English Kids</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff8dc, #e0f7fa);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6f00;
+    font-size: 38px;
+}
+
+.subtitle {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+.numbers-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+
+.number-card {
+
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+
+.number-card:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.number {
+
+    font-size: 55px;
+    font-weight: bold;
+    color: #2196f3;
+
+}
+
+
+.word {
+
+    font-size: 28px;
+    color: #4caf50;
+    margin: 15px;
+
+}
+
+
+button {
+
+    background:#ff4081;
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding:12px 25px;
+    font-size:20px;
+    cursor:pointer;
+
+}
+
+
+button:hover {
+
+    background:#e91e63;
+
+}
+
+
+.listen-all {
+
+    margin:30px;
+    background:#9c27b0;
+
+}
+
+
+.quiz {
+
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    margin:40px auto;
+    max-width:600px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+.quiz h2 {
+
+    color:#ff5722;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>🔢 Numbers 1–20</h1>
+
+<div class="subtitle">
+Let's Learn Numbers! 🌈
+</div>
+
+
+<button class="listen-all" onclick="playAll()">
+🎧 Listen All Numbers
+</button>
+
+
+
+<div class="numbers-container">
+
+
+<div class="number-card">
+<div class="number">1</div>
+<div class="word">One</div>
+<button onclick="playSound('one')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">2</div>
+<div class="word">Two</div>
+<button onclick="playSound('two')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">3</div>
+<div class="word">Three</div>
+<button onclick="playSound('three')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">4</div>
+<div class="word">Four</div>
+<button onclick="playSound('four')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">5</div>
+<div class="word">Five</div>
+<button onclick="playSound('five')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">6</div>
+<div class="word">Six</div>
+<button onclick="playSound('six')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">7</div>
+<div class="word">Seven</div>
+<button onclick="playSound('seven')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">8</div>
+<div class="word">Eight</div>
+<button onclick="playSound('eight')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">9</div>
+<div class="word">Nine</div>
+<button onclick="playSound('nine')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">10</div>
+<div class="word">Ten</div>
+<button onclick="playSound('ten')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">11</div>
+<div class="word">Eleven</div>
+<button onclick="playSound('eleven')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">12</div>
+<div class="word">Twelve</div>
+<button onclick="playSound('twelve')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">13</div>
+<div class="word">Thirteen</div>
+<button onclick="playSound('thirteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">14</div>
+<div class="word">Fourteen</div>
+<button onclick="playSound('fourteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">15</div>
+<div class="word">Fifteen</div>
+<button onclick="playSound('fifteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">16</div>
+<div class="word">Sixteen</div>
+<button onclick="playSound('sixteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">17</div>
+<div class="word">Seventeen</div>
+<button onclick="playSound('seventeen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">18</div>
+<div class="word">Eighteen</div>
+<button onclick="playSound('eighteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">19</div>
+<div class="word">Nineteen</div>
+<button onclick="playSound('nineteen')">🔊</button>
+</div>
+
+
+<div class="number-card">
+<div class="number">20</div>
+<div class="word">Twenty</div>
+<button onclick="playSound('twenty')">🔊</button>
+</div>
+
+  
+<div class="quiz">
+
+<h2>🎯 Quiz Time</h2>
+
+<p>Which number is this?</p>
+
+<h1>7</h1>
+
+<button>Seven</button>
+
+</div>
+
+
+
+
+<script>
+
+
+function playSound(number){
+
+let audio = new Audio("audio/number-" + number + ".mp3");
+
+audio.play();
+
+}
+
+
+function playAll(){
+
+let audio = new Audio("audio/numbers-1-20.mp3");
+
+audio.play();
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
