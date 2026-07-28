@@ -66,4 +66,57 @@
 
 <p id="score">Score: 0</p>
 
+<script>
+
+let score = 0;
+
+let questionNumber = 0;
+
+let questions = [
+{
+question: "Rouge hangi renktir?",
+options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
+answer: 1
+}
+];
+
+document.getElementById("question").innerHTML =
+questions[questionNumber].question;
+
+document.getElementById("option0").innerHTML =
+questions[questionNumber].options[0];
+
+document.getElementById("option1").innerHTML =
+questions[questionNumber].options[1];
+
+document.getElementById("option2").innerHTML =
+questions[questionNumber].options[2];
+
+document.getElementById("option3").innerHTML =
+questions[questionNumber].options[3];
+
+
+function checkAnswer(answer){
+
+if(answer == questions[questionNumber].answer){
+
+score++;
+
+document.getElementById("score").innerHTML =
+"Score: " + score;
+
+alert("Bravo! 🎉");
+
+}
+
+else{
+
+alert("Try again 😊");
+
+}
+
+}
+
+</script>
+  
 </div>
