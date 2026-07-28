@@ -73,13 +73,39 @@ let score = 0;
 let questionNumber = 0;
 
 let questions = [
+
 {
 question: "Rouge hangi renktir?",
 options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
 answer: 1
-}
-];
+},
 
+{
+question: "Bleu hangi renktir?",
+options: ["Mor", "Mavi", "Turuncu", "Siyah"],
+answer: 1
+},
+
+{
+question: "Vert hangi renktir?",
+options: ["Yeşil", "Beyaz", "Pembe", "Kahverengi"],
+answer: 0
+},
+
+{
+question: "Jaune hangi renktir?",
+options: ["Siyah", "Sarı", "Kırmızı", "Mor"],
+answer: 1
+},
+
+{
+question: "Orange hangi renktir?",
+options: ["Turuncu", "Mavi", "Yeşil", "Beyaz"],
+answer: 0
+}
+
+];
+  
 document.getElementById("question").innerHTML =
 questions[questionNumber].question;
 
