@@ -26,3 +26,18 @@
 .quiz-card p{
     font-size:20px;
 }
+
+/* Rouge kart rengi */
+
+.rouge-card{
+    background:#ff4d4d;
+    color:white;
+}
+
+.rouge-card h2{
+    color:white;
+}
+
+.rouge-card p{
+    color:white;
+}
