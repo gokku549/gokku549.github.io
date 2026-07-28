@@ -164,6 +164,28 @@ document.getElementById("score").innerHTML =
 alert("Bravo! 🎉");
 
 }
+questionNumber++;
+
+if(questionNumber < questions.length){
+
+document.getElementById("question").innerHTML =
+questions[questionNumber].question;
+
+document.getElementById("option0").innerHTML =
+questions[questionNumber].options[0];
+
+document.getElementById("option1").innerHTML =
+questions[questionNumber].options[1];
+
+document.getElementById("option2").innerHTML =
+questions[questionNumber].options[2];
+
+document.getElementById("option3").innerHTML =
+questions[questionNumber].options[3];
+
+}
+  
+}
 
 else{
 
