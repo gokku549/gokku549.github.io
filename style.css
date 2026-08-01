@@ -264,3 +264,22 @@ background:#795548;
     margin:0 auto 30px;
     border-radius:50px;
 }
+
+.color-card {
+    background: white !important;
+    color: black !important;
+    padding: 20px !important;
+    display: block !important;
+}
+
+.color-card h4 {
+    color: red !important;
+    font-size: 40px !important;
+    display: block !important;
+}
+
+.color-card p {
+    color: black !important;
+    font-size: 25px !important;
+    display: block !important;
+}
