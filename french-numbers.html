@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>French Numbers - Les Nombres</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>🇫🇷 Les Nombres</h1>
+
+<p>Apprenons les nombres en français !</p>
+
+
+<div class="numbers-container">
+
+
+<div class="number-card">
+
+<div class="number">1</div>
+
+<div class="word">Un</div>
+
+<button onclick="playSound('un')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">2</div>
+
+<div class="word">Deux</div>
+
+<button onclick="playSound('deux')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">3</div>
+
+<div class="word">Trois</div>
+
+<button onclick="playSound('trois')">🔊</button>
+
+</div>
+
+<div class="number-card">
+
+<div class="number">4</div>
+
+<div class="word">Quatre</div>
+
+<button onclick="playSound('quatre')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">5</div>
+
+<div class="word">Cinq</div>
+
+<button onclick="playSound('cinq')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">6</div>
+
+<div class="word">Six</div>
+
+<button onclick="playSound('six')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">7</div>
+
+<div class="word">Sept</div>
+
+<button onclick="playSound('sept')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">8</div>
+
+<div class="word">Huit</div>
+
+<button onclick="playSound('huit')">🔊</button>
+
+</div>
+
+
+<div class="number-card">
+
+<div class="number">9</div>
+
+<div class="word">Neuf</div>
+
+<button onclick="playSound('neuf')">🔊</button>
+
+</div>
+
+<div class="number-card">
+
+<div class="number">10</div>
+
+<div class="word">Dix</div>
+
+<button onclick="playSound('dix')">🔊</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function playSound(word){
+
+let audio = new Audio("audio/" + word + ".mp3");
+
+audio.play();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
