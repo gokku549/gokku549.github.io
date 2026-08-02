@@ -283,3 +283,23 @@ background:#795548;
     font-size: 25px !important;
     display: block !important;
 }
+
+/* Les jours de la semaine yazı düzeni */
+
+.color-card h4 {
+    text-align: center;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+
+.color-card p {
+    text-align: center;
+}
+
+
+/* Uzun gün isimleri için */
+
+.color-card h4 {
+    letter-spacing: 1px;
+}
