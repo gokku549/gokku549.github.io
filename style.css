@@ -350,3 +350,26 @@ background:#795548;
 .dimanche {
     background-color: #ff9ff3;
 }
+
+/* Les jours de la semaine son düzen */
+
+.color-card {
+    text-align: center;
+}
+
+
+.color-card h4 {
+    color: red !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    margin: 10px 0 !important;
+    width: 100%;
+}
+
+
+.color-card p {
+    color: black !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    margin: 10px 0;
+}
