@@ -303,3 +303,50 @@ background:#795548;
 .color-card h4 {
     letter-spacing: 1px;
 }
+
+/* Les jours de la semaine kart düzeni */
+
+.color-card h4 {
+    color: red;
+    font-size: 22px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+
+.color-card p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* Gün kart renkleri */
+
+.lundi {
+    background-color: #3498db;
+}
+
+.mardi {
+    background-color: #2ecc71;
+}
+
+.mercredi {
+    background-color: #f1c40f;
+}
+
+.jeudi {
+    background-color: #e67e22;
+}
+
+.vendredi {
+    background-color: #e74c3c;
+}
+
+.samedi {
+    background-color: #9b59b6;
+}
+
+.dimanche {
+    background-color: #ff9ff3;
+}
