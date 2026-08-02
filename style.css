@@ -373,3 +373,62 @@ background:#795548;
     text-align: center !important;
     margin: 10px 0;
 }
+
+/* ============================= */
+/* LES JOURS DE LA SEMAINE SON */
+/* ============================= */
+
+.color-card {
+    text-align: center;
+}
+
+/* Üst Fransızca gün adı */
+
+.color-card h4 {
+    color: red !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    margin: 5px 0 20px 0 !important;
+}
+
+
+/* Türkçe karşılık */
+
+.color-card p {
+    color: black !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    margin: 20px 0 !important;
+}
+
+
+/* Gün kart renkleri */
+
+.color-card.lundi {
+    background-color: #3498db !important;
+}
+
+.color-card.mardi {
+    background-color: #2ecc71 !important;
+}
+
+.color-card.mercredi {
+    background-color: #fdd835 !important;
+}
+
+.color-card.jeudi {
+    background-color: #fb8c00 !important;
+}
+
+.color-card.vendredi {
+    background-color: #e53935 !important;
+}
+
+.color-card.samedi {
+    background-color: #8e24aa !important;
+}
+
+.color-card.dimanche {
+    background-color: #ec407a !important;
+}
+
