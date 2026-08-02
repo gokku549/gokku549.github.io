@@ -432,3 +432,20 @@ background:#795548;
     background-color: #ec407a !important;
 }
 
+/* Mevsim kart renkleri */
+
+.color-card.printemps {
+    background-color: #ffb7c5 !important;
+}
+
+.color-card.ete {
+    background-color: #ffd54f !important;
+}
+
+.color-card.automne {
+    background-color: #ff9800 !important;
+}
+
+.color-card.hiver {
+    background-color: #90caf9 !important;
+}
