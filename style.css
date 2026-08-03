@@ -564,3 +564,13 @@ background:#795548;
     background:#2e7d32;
 
 }
+
+/* Hayvan resimleri */
+.animal-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+    margin:10px auto;
+}
