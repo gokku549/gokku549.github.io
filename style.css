@@ -47,27 +47,32 @@ body > footer {
 
 .hero img {
     display: block;
-    width: 620px;
-    max-width: 90%;
-    height: 360px;
+    width: 820px;
+    max-width: 94%;
+    height: 390px;
     object-fit: cover;
-    margin: 0 auto 25px;
-    border-radius: 18px;
+    margin: 0 auto 28px;
+    border-radius: 16px;
 }
 
 .hero h1 {
-    margin: 10px 0 5px;
-    font-size: 2.4rem;
+    margin: 8px 0 5px;
+    font-size: 2.1rem;
+    line-height: 1.2;
 }
 
 .hero h2 {
     margin: 5px 0;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 600;
 }
 
 .hero-subtitle {
-    font-size: 1.15rem;
-    font-weight: bold;
+    margin-top: 6px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
 /* =========================================================
