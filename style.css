@@ -1123,3 +1123,112 @@ section ol {
     line-height: 1.5;
     margin: 8px 0;
 }
+
+/* =====================================================
+   ANA SAYFA GÖRSELLERİ - ÇOK BÜYÜK VE ORANI KORUNMUŞ
+   ===================================================== */
+
+/* Ana kartların bulunduğu alanı büyüt */
+.cards,
+.card-container,
+.cards-container,
+.services-grid,
+.features-grid,
+.home-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Kartları büyüt */
+.card,
+.service-card,
+.feature-card,
+.home-card {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* RESİMLERİ EN BÜYÜK BOYUTA GETİR */
+.card img,
+.service-card img,
+.feature-card img,
+.home-card img {
+    width: 100% !important;
+    height: 430px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Kartın yazı bölümünü de büyüt */
+.card-content,
+.service-card-content,
+.feature-card-content,
+.home-card-content {
+    padding: 20px !important;
+    min-height: 110px !important;
+}
+
+/* Başlıklar okunaklı olsun */
+.card h2,
+.card h3,
+.service-card h2,
+.service-card h3,
+.feature-card h2,
+.feature-card h3,
+.home-card h2,
+.home-card h3 {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+}
+
+/* Alt açıklamalar */
+.card p,
+.service-card p,
+.feature-card p,
+.home-card p {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+}
+
+/* Ekran küçülünce düzgün devam etsin */
+@media (max-width: 1000px) {
+    .cards,
+    .card-container,
+    .cards-container,
+    .services-grid,
+    .features-grid,
+    .home-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .card img,
+    .service-card img,
+    .feature-card img,
+    .home-card img {
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards,
+    .card-container,
+    .cards-container,
+    .services-grid,
+    .features-grid,
+    .home-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card img,
+    .service-card img,
+    .feature-card img,
+    .home-card img {
+        height: auto !important;
+    }
+}
