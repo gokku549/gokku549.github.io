@@ -1,6 +1,6 @@
 /* =========================================================
    ESRA GK ACADEMY
-   ANA SAYFA TASARIMI
+   PROFESYONEL ANA SAYFA TASARIMI
    ========================================================= */
 
 * {
@@ -16,199 +16,431 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #f7f8fc;
-    color: #222;
+    color: #263238;
     line-height: 1.7;
 }
 
-/* ANA İÇERİK */
-main,
-.container,
-.content,
-section {
-    width: 100%;
-}
+/* =========================================================
+   GENEL BÖLÜMLER
+   ========================================================= */
 
-/* BÖLÜMLER */
 section {
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 55px 45px;
 }
 
-/* BAŞLIKLAR */
+section + section {
+    margin-top: 10px;
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
     line-height: 1.3;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.3rem;
-    margin: 20px 0;
+    font-size: 2.4rem;
+    margin: 25px 0 12px;
 }
 
 h2 {
     text-align: center;
     font-size: 2rem;
-    margin: 0 0 30px;
+    margin: 0 0 25px;
 }
 
 h3 {
-    font-size: 1.35rem;
-    margin-bottom: 12px;
+    font-size: 1.6rem;
+    margin-top: 30px;
 }
 
-/* PARAGRAFLAR */
+h4 {
+    font-size: 1.3rem;
+    margin-top: 35px;
+}
+
+h5 {
+    font-size: 1.1rem;
+    margin-top: 25px;
+}
+
 p {
-    max-width: 850px;
+    max-width: 820px;
     margin: 0 0 18px;
 }
 
-/* LİSTELER */
 ul,
 ol {
-    max-width: 850px;
+    max-width: 820px;
+    margin-left: 5%;
 }
 
-/* RESİMLER */
-img {
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 45px 0;
+}
+
+/* =========================================================
+   ÜST / HERO
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 30px 45px;
+    text-align: center;
+}
+
+.hero > img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 420px;
+    height: 280px;
+    max-width: 90%;
+    object-fit: cover;
+    margin: 0 auto 25px;
+    border-radius: 20px;
 }
 
-/* ORTA BOYUTLU GÖRSELLER */
-section img {
+.hero h2 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   HOŞ GELDİNİZ
+   ========================================================= */
+
+.welcome-section {
+    text-align: center;
+}
+
+.welcome-section p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   HAKKIMDA
+   ========================================================= */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-section > img {
     width: 420px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-section > div {
+    text-align: left;
+}
+
+.about-section h2 {
+    text-align: left;
+}
+
+/* =========================================================
+   NORMAL İÇERİK BÖLÜMLERİ
+   ========================================================= */
+
+section:not(.about-section):not(.kids-section):not(.animals-section) > p,
+section:not(.about-section):not(.kids-section):not(.animals-section) > ul,
+section:not(.about-section):not(.kids-section):not(.animals-section) > ol {
+    width: 88%;
+    margin-left: 5%;
+}
+
+/* =========================================================
+   ÇOCUKLAR ANA BÖLÜMÜ
+   ========================================================= */
+
+.kids-section {
+    background: #ffffff;
+    border-radius: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.kids-section p,
+.kids-section ul {
+    margin-left: 5%;
+}
+
+/* =========================================================
+   KIDS BANNER GÖRSELLERİ
+   ========================================================= */
+
+.kids-banner {
+    display: block;
+    width: 420px;
+    height: 270px;
     max-width: 90%;
-    height: 280px;
     object-fit: cover;
     margin: 25px auto;
     border-radius: 18px;
 }
 
-/* KART ALANI */
-.cards,
-.card-container,
-.grid,
-.gallery,
-.items {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
-    gap: 28px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
+/* =========================================================
+   ENGLISH / FRENCH KIDS
+   ========================================================= */
+
+section > h3 {
+    margin-left: 5%;
 }
 
-/* KARTLAR */
-.card,
-.cards > *,
-.card-container > *,
-.grid > *,
-.gallery > *,
-.items > * {
-    width: 100%;
-    padding: 24px;
+section > h4,
+section > h5 {
+    margin-left: 5%;
+}
+
+section > h4 + p,
+section > h5 + p {
+    margin-left: 5%;
+}
+
+/* =========================================================
+   STORY BOX
+   ========================================================= */
+
+.story-box {
+    width: 88%;
+    margin: 25px auto 35px;
+    padding: 28px;
     background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 }
 
-/* KART İÇİNDEKİ RESİMLER */
-.card img,
-.cards img,
-.card-container img,
-.grid img,
-.gallery img,
-.items img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    margin: 0 auto 20px;
-    border-radius: 14px;
+/* =========================================================
+   WELL DONE
+   ========================================================= */
+
+.well-done {
+    width: 88%;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    text-align: center;
 }
 
-/* METİN ALANI
-   SOLDA BAŞLAR, FAKAT KENARA YAPIŞMAZ */
-.text,
-.text-content,
-.description,
-.content-text {
-    width: 90%;
-    max-width: 850px;
-    margin: 0 auto 25px;
-    text-align: left;
+/* =========================================================
+   SES DOSYALARI
+   ========================================================= */
+
+audio {
+    display: block;
+    width: 430px;
+    max-width: 90%;
+    margin: 15px 0 25px 5%;
 }
 
-/* VİDEOLAR */
-video,
-iframe {
+/* =========================================================
+   VİDEOLAR
+   SOL TARAFTA AMA KENARA YAPIŞIK DEĞİL
+   ========================================================= */
+
+.video-container {
+    width: 88%;
+    margin: 20px 0 35px 5%;
+}
+
+.video-container iframe {
     display: block;
     width: 700px;
-    max-width: 92%;
-    min-height: 390px;
-    margin: 30px auto;
+    max-width: 100%;
+    height: 395px;
     border: 0;
-    border-radius: 16px;
+    border-radius: 18px;
 }
 
-/* VİDEO ALANI */
-.video-container,
-.video-wrapper,
-.videos {
-    width: 90%;
-    max-width: 850px;
-    margin: 30px 0 30px 6%;
-    text-align: left;
+/* =========================================================
+   FRANSIZCA KARTLAR
+   ========================================================= */
+
+.color-cards {
+    width: 92%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
-/* BUTONLAR */
-button,
-.btn,
-a.button {
-    display: inline-block;
-    padding: 11px 22px;
+.color-card {
+    min-height: 190px;
+    padding: 22px 15px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.color-card h4 {
+    margin: 5px 0 10px;
+}
+
+.color-card p {
+    margin: 6px auto;
+}
+
+.color-card audio {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px auto 0;
+}
+
+.color-card button {
+    margin-top: 10px;
+    padding: 10px 16px;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
 }
 
-/* SES BUTONLARI */
-audio {
-    display: block;
-    max-width: 100%;
-    margin: 15px auto;
-}
+/* =========================================================
+   HAYVAN KARTLARI
+   ========================================================= */
 
-/* TABLOLAR */
-table {
+.animals-section {
     width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 50px 35px;
+}
+
+.animals-container {
+    width: 94%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.animal-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+}
+
+.animal-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.animal-card h3 {
+    margin: 8px 0;
+    font-size: 1.15rem;
+}
+
+.animal-card p {
+    margin: 5px auto;
+}
+
+.animal-card button {
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   BUTONLAR
+   ========================================================= */
+
+button,
+.main-button {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+/* =========================================================
+   BAŞLIK AYIRICILARI
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.section-divider {
+    width: 70px;
+    height: 3px;
+    margin: 12px auto 25px;
+}
+
+/* =========================================================
+   İLETİŞİM
+   ========================================================= */
+
+.contact-section {
     max-width: 900px;
-    margin: 25px auto;
-    border-collapse: collapse;
-    background: #fff;
 }
 
-th,
-td {
+.contact-section > p {
+    margin-left: 5%;
+}
+
+.contact-form {
+    width: 88%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: inherit;
 }
 
-/* FORM ELEMANLARI */
-input,
-textarea,
-select {
-    max-width: 100%;
-    padding: 10px;
+.contact-form button {
+    align-self: flex-start;
+    margin-top: 10px;
 }
 
-/* FOOTER */
+.contact-links {
+    width: 88%;
+    margin: 30px auto;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer {
     width: 100%;
     text-align: center;
@@ -220,10 +452,64 @@ footer {
    TELEFON
    ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
     section {
+        width: 94%;
         padding: 40px 20px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-section > img {
+        width: 420px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-section > div {
+        text-align: left;
+    }
+
+    .about-section h2 {
+        text-align: center;
+    }
+
+    .color-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .animals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-container {
+        width: 94%;
+        margin-left: 3%;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 330px;
+    }
+}
+
+/* =========================================================
+   KÜÇÜK TELEFON
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding: 35px 15px;
+    }
+
+    .hero > img {
+        width: 92%;
+        height: 230px;
     }
 
     h1 {
@@ -231,72 +517,60 @@ footer {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.55rem;
     }
 
-    .cards,
-    .card-container,
-    .grid,
-    .gallery,
-    .items {
-        grid-template-columns: 1fr;
-        gap: 22px;
+    h3 {
+        font-size: 1.35rem;
     }
 
-    section img {
-        width: 90%;
+    section {
+        width: 96%;
+        padding: 35px 15px;
+    }
+
+    .about-section > img {
+        width: 94%;
         height: 230px;
     }
 
-    .text,
-    .text-content,
-    .description,
-    .content-text {
+    .kids-banner {
+        width: 94%;
+        height: 220px;
+    }
+
+    .color-cards {
+        grid-template-columns: 1fr;
         width: 94%;
     }
 
-    video,
-    iframe {
+    .animals-container {
+        grid-template-columns: 1fr;
         width: 94%;
-        min-height: 230px;
     }
 
-    .video-container,
-    .video-wrapper,
-    .videos {
+    .animal-card img {
+        height: 200px;
+    }
+
+    .video-container {
+        width: 96%;
+        margin-left: 2%;
+    }
+
+    .video-container iframe {
+        height: 230px;
+    }
+
+    audio {
         width: 94%;
         margin-left: 3%;
     }
 
-    table {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-}
-
-/* KÜÇÜK TELEFONLAR */
-@media (max-width: 480px) {
-
-    section {
-        padding: 30px 15px;
-    }
-
-    section img {
+    section:not(.about-section):not(.kids-section):not(.animals-section) > p,
+    section:not(.about-section):not(.kids-section):not(.animals-section) > ul,
+    section:not(.about-section):not(.kids-section):not(.animals-section) > ol {
         width: 94%;
-        height: 210px;
-    }
-
-    h1 {
-        font-size: 1.55rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    video,
-    iframe {
-        width: 96%;
-        min-height: 210px;
+        margin-left: 3%;
     }
 }
