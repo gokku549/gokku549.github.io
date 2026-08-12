@@ -1044,3 +1044,44 @@ section ol {
     word-wrap: break-word;
 }
 
+/* ===== ANA GÖRSELLERİ BİRAZ BÜYÜT ===== */
+
+.card img,
+.service-card img,
+.education-card img,
+.profile-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Görsel kartlarını dengeli tut */
+.card,
+.service-card,
+.education-card,
+.profile-card {
+    overflow: hidden;
+}
+
+/* Alt sıradaki görseller de aynı büyüklükte olsun */
+.card img,
+.service-card img,
+.education-card img,
+.profile-card img {
+    min-height: 260px;
+}
+
+/* İletişim bölümündeki yazılar okunabilir olsun */
+.contact,
+.contact-section {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact h2,
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
