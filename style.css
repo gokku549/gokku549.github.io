@@ -578,3 +578,23 @@ footer {
     }
 
 }
+/* =========================================================
+   YAZI VE BAŞLIK DENGESİ
+   ========================================================= */
+
+section h2,
+section h3 {
+    text-align: center;
+}
+
+section > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color-card h4,
+.color-card p,
+.animal-card h3,
+.animal-card p {
+    text-align: center;
+}
