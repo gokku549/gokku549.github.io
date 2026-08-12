@@ -1093,3 +1093,33 @@ section ol {
     display: block;
     margin: 0 auto;
 }
+
+/* ANA RESMİ BÜYÜT - ORANI BOZMA */
+.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ALTINDAKİ YAZILAR OKUNAKLI OLSUN */
+.hero-image h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 20px 0 10px;
+}
+
+.hero-image p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
