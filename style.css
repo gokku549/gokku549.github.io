@@ -47,10 +47,9 @@ body > footer {
 
 .hero img {
     display: block;
-    width: 520px;
+    width: 620px;
     max-width: 90%;
-    height: 330px;
-    min-height: 250px;
+    height: 360px;
     object-fit: cover;
     margin: 0 auto 25px;
     border-radius: 18px;
