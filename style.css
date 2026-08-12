@@ -321,6 +321,7 @@ audio {
     background: #ffffff;
     border-radius: 18px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    min-height: 250px;
 }
 
 .animal-card img {
