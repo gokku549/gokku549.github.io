@@ -1044,20 +1044,24 @@ section ol {
     word-wrap: break-word;
 }
 
-/* ===== ANA GÖRSELLERİ BİRAZ BÜYÜT ===== */
+/* =========================================
+   KART GÖRSELLERİ - BİRAZ DAHA BÜYÜK
+   TASARIMI BOZMADAN
+   ========================================= */
 
 .card img,
 .service-card img,
 .education-card img,
 .profile-card img {
     width: 100%;
-    height: 260px;
+    height: 285px;
     object-fit: contain;
+    object-position: center center;
     display: block;
     margin: 0 auto;
 }
 
-/* Görsel kartlarını dengeli tut */
+/* Tüm kartlarda görsel alanı eşit */
 .card,
 .service-card,
 .education-card,
@@ -1065,23 +1069,18 @@ section ol {
     overflow: hidden;
 }
 
-/* Alt sıradaki görseller de aynı büyüklükte olsun */
+/* Alt sıradaki görseller de küçük kalmasın */
 .card img,
 .service-card img,
 .education-card img,
 .profile-card img {
-    min-height: 260px;
+    min-height: 285px;
 }
 
-/* İletişim bölümündeki yazılar okunabilir olsun */
-.contact,
-.contact-section {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-.contact h2,
-.contact-section h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
+/* Görsel ile yazı bölümü arasında düzgün boşluk */
+.card .content,
+.service-card .content,
+.education-card .content,
+.profile-card .content {
+    padding-top: 14px;
 }
