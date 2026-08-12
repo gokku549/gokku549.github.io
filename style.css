@@ -614,3 +614,46 @@ section ol {
     margin-left: auto;
     margin-right: auto;
 }
+/* =========================================================
+   8. ADIM — KART RENKLERİ
+   ========================================================= */
+
+.color-card.rouge {
+    background: #fff1f3;
+}
+
+.color-card.bleu {
+    background: #eef6ff;
+}
+
+.color-card.vert {
+    background: #effaf2;
+}
+
+.color-card.jaune {
+    background: #fffbea;
+}
+
+.color-card.orange {
+    background: #fff3e8;
+}
+
+.color-card.violet {
+    background: #f5efff;
+}
+
+.color-card.noir {
+    background: #eeeeee;
+}
+
+.color-card.blanc {
+    background: #ffffff;
+}
+
+.color-card.rose {
+    background: #fff0f7;
+}
+
+.color-card.marron {
+    background: #f7eee7;
+}
