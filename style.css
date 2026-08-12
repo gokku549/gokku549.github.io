@@ -326,7 +326,7 @@ audio {
 .animal-card img {
     display: block;
     width: 100%;
-    height: 145px;
+    height: 180px;
     object-fit: contain;
     margin: 0 auto 12px;
 }
