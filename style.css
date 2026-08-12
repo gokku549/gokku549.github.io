@@ -45,15 +45,14 @@ body > footer {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-.hero img {
-    display: block;
-    width: 820px;
-    max-width: 94%;
-    height: 390px;
+.hero > img {
+    width: 100%;
+    max-width: 1200px;
+    height: 560px;
+    margin: 0 auto 30px auto;
     object-fit: contain;
     object-position: center;
-    margin: 0 auto 28px;
-    border-radius: 16px;
+    display: block;
 }
 
 .hero h1 {
