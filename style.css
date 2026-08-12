@@ -686,3 +686,17 @@ section ol {
     line-height: 1.5;
     margin: 4px 0;
 }
+/* =========================================================
+   10. ADIM — KART HOVER EFEKTİ
+   ========================================================= */
+
+.color-card,
+.animal-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.color-card:hover,
+.animal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
