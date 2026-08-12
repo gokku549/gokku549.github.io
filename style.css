@@ -1377,3 +1377,17 @@ section img {
         font-size: 1rem;
     }
 }
+/* 1. SAYFA KAPAK RESMİ */
+.hero {
+    text-align: center;
+}
+
+.hero > img {
+    display: block;
+    width: 96%;
+    max-width: 1150px;
+    height: 500px;
+    margin: 0 auto 30px auto;
+    object-fit: contain;
+    object-position: center center;
+}
