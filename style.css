@@ -1012,3 +1012,29 @@ section ol {
     }
 }
 
+/* =========================================================
+   29. ADIM — KART YAZI ARALIK DÜZENİ
+   ========================================================= */
+
+.color-card h4,
+.animal-card h3 {
+    letter-spacing: 0.2px;
+}
+
+.color-card p,
+.animal-card p {
+    letter-spacing: 0.1px;
+}
+
+/* =========================================================
+   30. ADIM — KART YAZI TAŞMASINI ÖNLEME
+   ========================================================= */
+
+.color-card h4,
+.color-card p,
+.animal-card h3,
+.animal-card p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
