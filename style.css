@@ -837,3 +837,29 @@ section ol {
     }
 }
 
+/* =========================================================
+   19. ADIM — KART GÖRSEL BOYUTLARI
+   ========================================================= */
+
+.color-card img,
+.animal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================================
+   20. ADIM — KART İÇ BOŞLUK DENGESİ
+   ========================================================= */
+
+.color-card,
+.animal-card {
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.color-card img,
+.animal-card img {
+    margin-bottom: 14px;
+}
