@@ -1387,3 +1387,20 @@ section img {
     margin: 0 auto 30px auto;
     object-fit: fill;
 }
+
+/* =========================================
+   KAPAK RESMİ — DAHA GENİŞ
+========================================= */
+
+.hero {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
+}
