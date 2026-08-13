@@ -1405,12 +1405,13 @@ section img {
     margin: 0 auto 30px auto;
 }
 
-/* EĞİTİM KOÇLUĞU GÖRSELİ */
+/* SADECE EĞİTİM KOÇLUĞU RESMİ */
 section img[alt="Eğitim Koçluğu"] {
-    display: block;
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-    margin: 25px auto 30px auto;
-    object-fit: contain;
+    display: block !important;
+    width: 850px !important;
+    max-width: 90% !important;
+    height: auto !important;
+    min-width: 500px !important;
+    margin: 25px auto 30px auto !important;
+    object-fit: contain !important;
 }
