@@ -1404,3 +1404,13 @@ section img {
     height: auto;
     margin: 0 auto 30px auto;
 }
+
+/* EĞİTİM KOÇLUĞU GÖRSELİ */
+section img[alt="Eğitim Koçluğu"] {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 25px auto 30px auto;
+    object-fit: contain;
+}
