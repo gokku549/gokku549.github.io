@@ -1416,3 +1416,13 @@ section img[alt="Eğitim Koçluğu"] {
     object-fit: contain !important;
 }
 
+/* SADECE EĞİTİM KOÇLUĞU RESMİ */
+section img[alt="Eğitim Koçluğu"] {
+    display: block !important;
+    width: 600px !important;
+    max-width: 85% !important;
+    height: auto !important;
+    margin: 25px auto 30px auto !important;
+    object-fit: contain !important;
+}
+
