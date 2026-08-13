@@ -1405,33 +1405,13 @@ section img {
     margin: 0 auto 30px auto;
 }
 
-/* SADECE EĞİTİM KOÇLUĞU RESMİ */
+/* EĞİTİM KOÇLUĞU — BÜYÜK VE ORTALI */
 section img[alt="Eğitim Koçluğu"] {
     display: block !important;
-    width: 850px !important;
-    max-width: 90% !important;
+    width: 100% !important;
+    max-width: 1100px !important;
     height: auto !important;
-    min-width: 500px !important;
-    margin: 25px auto 30px auto !important;
-    object-fit: contain !important;
-}
-
-/* SADECE EĞİTİM KOÇLUĞU RESMİ */
-section img[alt="Eğitim Koçluğu"] {
-    display: block !important;
-    width: 600px !important;
-    max-width: 85% !important;
-    height: auto !important;
-    margin: 25px auto 30px auto !important;
-    object-fit: contain !important;
-}
-
-/* SADECE EĞİTİM KOÇLUĞU */
-section img[alt="Eğitim Koçluğu"] {
-    display: block !important;
-    width: 600px !important;
-    max-width: 80% !important;
-    height: auto !important;
-    margin: 25px auto 30px auto !important;
+    min-width: 0 !important;
+    margin: 30px auto !important;
     object-fit: contain !important;
 }
