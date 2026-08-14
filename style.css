@@ -1906,3 +1906,251 @@ section img {
     min-height: 700px !important;
 }
 
+/* =========================================================
+   ESRA GK ACADEMY
+   TÜM ANA BÖLÜMLER — YATAY TEK BEYAZ SAYFA
+   MEVCUT İÇERİK / RESİM / YAZILARA DOKUNMA
+   ========================================================= */
+
+/* Ana beyaz sayfalar */
+section,
+.hero {
+    width: min(1250px, 92%) !important;
+    max-width: 1250px !important;
+    margin: 35px auto !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* =========================================================
+   1 — HAKKIMDA
+   RESİM SOLDA — YAZI SAĞDA
+   ========================================================= */
+
+.about-section {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 40px !important;
+}
+
+.about-section > img {
+    flex: 0 0 38% !important;
+    width: 38% !important;
+    max-width: 430px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.about-section > div {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+
+/* =========================================================
+   2 — SINAV HAZIRLIĞI
+   RESİM SOLDA — YAZI SAĞDA
+   ========================================================= */
+
+.exam-preparation-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 40px !important;
+}
+
+.exam-preparation-image {
+    flex: 0 0 52% !important;
+    width: 52% !important;
+}
+
+.exam-preparation-image img {
+    width: 100% !important;
+    max-width: 560px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.exam-preparation-text {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+/* =========================================================
+   3 — PROFESYONEL ÇEVİRİ
+   ========================================================= */
+
+.translation-services {
+    text-align: center !important;
+}
+
+.translation-services img {
+    width: 100% !important;
+    max-width: 1100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* =========================================================
+   4 — İNGİLİZCE EĞİTİM
+   ========================================================= */
+
+.english-education {
+    text-align: center !important;
+}
+
+.english-education img {
+    width: 100% !important;
+    max-width: 1100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* =========================================================
+   5 — FRANSIZCA EĞİTİM
+   ========================================================= */
+
+.french-education {
+    text-align: center !important;
+}
+
+.french-education img {
+    width: 100% !important;
+    max-width: 1100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+/* =========================================================
+   6 — ÇOCUKLAR İÇİN İNGİLİZCE & FRANSIZCA
+   BÜYÜK RESİM + YAZILAR
+   TEK YATAY SAYFA
+   ========================================================= */
+
+#cocuklar {
+    width: min(1250px, 92%) !important;
+    max-width: 1250px !important;
+    margin: 35px auto !important;
+    padding: 35px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Resim ve yazılar yan yana */
+#cocuklar .children-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 35px !important;
+    width: 100% !important;
+}
+
+/* Resim alanı */
+#cocuklar .children-image {
+    flex: 0 0 62% !important;
+    width: 62% !important;
+    max-width: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+}
+
+/* Resmin oranını koru */
+#cocuklar .children-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transform: none !important;
+}
+
+/* Yazı alanı */
+#cocuklar .children-text {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    text-align: left !important;
+}
+
+/* Yazıları daraltma */
+#cocuklar .children-text p {
+    max-width: none !important;
+}
+
+
+/* =========================================================
+   ÇOCUK KARTLARI
+   MEVCUT İÇERİĞİ KORU
+   ========================================================= */
+
+#cocuklar .children-cards {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+}
+
+/* =========================================================
+   MASAÜSTÜ — YATAY DÜZEN
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    section,
+    .hero {
+        min-height: 0 !important;
+    }
+
+    #cocuklar .children-content {
+        flex-direction: row !important;
+    }
+
+    #cocuklar .children-image {
+        flex: 0 0 62% !important;
+    }
+
+ #cocuklar .children-text {
+        flex: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   TELEFON / TABLET
+   MOBİLDE YATAYI ZORLAMA
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-section,
+    .exam-preparation-content,
+    #cocuklar .children-content {
+        flex-direction: column !important;
+    }
+
+.about-section > img,
+    .exam-preparation-image,
+    #cocuklar .children-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    .about-section > div,
+    .exam-preparation-text,
+    #cocuklar .children-text {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    #cocuklar .children-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
