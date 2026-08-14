@@ -1624,3 +1624,132 @@ section img {
     }
 
 }
+
+/* =========================================================
+   ÇOCUKLAR İÇİN İNGİLİZCE & FRANSIZCA
+   ========================================================= */
+
+#cocuklar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+#cocuklar h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.children-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.children-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.children-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.children-text {
+    flex: 1;
+    text-align: left;
+}
+
+.children-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.children-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.children-card {
+    padding: 25px 18px;
+    border-radius: 16px;
+    background: #f7f9fc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.children-card h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.children-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* 📱 TABLET */
+@media (max-width: 900px) {
+
+    #cocuklar {
+        padding: 25px;
+    }
+
+    .children-content {
+        flex-direction: column;
+    }
+
+.children-text {
+        text-align: center;
+    }
+
+    .children-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 📱 TELEFON */
+@media (max-width: 600px) {
+
+    #cocuklar {
+        padding: 20px 15px;
+        margin: 25px auto;
+    }
+
+    #cocuklar h2 {
+        font-size: 26px;
+    }
+
+ .children-content {
+        gap: 25px;
+    }
+
+    .children-image img {
+        max-width: 100%;
+    }
+
+    .children-text p {
+        font-size: 16px;
+    }
+
+    .children-cards {
+        grid-template-columns: 1fr;
+    }
+}
