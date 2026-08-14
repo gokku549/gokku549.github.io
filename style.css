@@ -1844,3 +1844,31 @@ section img {
     font-size: 16px !important;
     line-height: 1.6 !important;
 }
+
+/* =========================================================
+   ENGLISH FOR KIDS — GÖRSELİ BÜYÜT VE ÜST KISMI GÖSTER
+   ========================================================= */
+
+#english-kids img,
+.english-kids img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* Görselin bulunduğu alan üstten kesmesin */
+#english-kids,
+.english-kids {
+    overflow: visible !important;
+}
+
+/* Resmin üstten kesilmesini engelle */
+#english-kids img,
+.english-kids img {
+    transform: scale(1.12);
+    transform-origin: center center;
+}
