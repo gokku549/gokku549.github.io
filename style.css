@@ -1755,42 +1755,23 @@ section img {
 }
 
 /* =========================================================
-   ÇOCUKLAR GÖRSELİ — DAHA BÜYÜK VE ORANTILI
+   ÇOCUKLAR — GERÇEK RESMİ BÜYÜT
    ========================================================= */
 
-.children-section img {
+#cocuklar .children-image {
     width: 100% !important;
-    max-width: 1100px !important;
-    height: auto !important;
-
-    transform: scale(1.90) !important;
-    transform-origin: center center !important;
-
-    display: block !important;
-    margin: 55px auto !important;
-
-    position: relative;
-    z-index: 2;
-}
-
-/* =========================================================
-   ÇOCUKLAR GÖRSELİ — ZORLA BÜYÜT
-   ========================================================= */
-
-.children-section {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
     overflow: visible !important;
 }
 
-.children-section img {
-    width: 1100px !important;
+#cocuklar .children-image img {
+    width: 1200px !important;
     max-width: none !important;
-    min-width: 1100px !important;
     height: auto !important;
 
     display: block !important;
-    margin-left: 50% !important;
-    transform: translateX(-50%) !important;
+    margin: 40px auto !important;
 
-    position: relative !important;
-    z-index: 10 !important;
+    transform: none !important;
 }
