@@ -1919,3 +1919,9 @@ section img {
     position: relative !important;
     z-index: 10 !important;
 }
+
+/* Çocuklar İçin İngilizce & Fransızca — resmi büyüt */
+.children-section img {
+    transform: scale(1.6);
+    transform-origin: center center;
+}
