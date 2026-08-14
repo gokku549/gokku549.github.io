@@ -2154,3 +2154,240 @@ section,
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+/* =========================================================
+   ESRA GK ACADEMY
+   TEK YATAY BEYAZ SAYFA DÜZENİ
+   MEVCUT RESİM VE YAZILARI BOZMAZ
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+/* HER ANA BÖLÜM TEK YATAY BEYAZ SAYFA */
+.hero,
+.welcome-section,
+.about-section,
+.education-coaching,
+.exam-preparation,
+.translation-services,
+.english-education,
+.french-education,
+#cocuklar,
+.english-kids-page,
+body > section,
+.contact-section {
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 35px 45px;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+ /* SAYFA DİKEY KART OLMASIN */
+    min-height: 0;
+    height: auto;
+
+    /* içerik taşmasın */
+    overflow: hidden;
+}
+
+/* RESİMLERİ KÜÇÜLTME */
+.hero img,
+.about-section img,
+.education-coaching img,
+.exam-preparation img,
+.translation-services img,
+.english-education img,
+.french-education img,
+#cocuklar img,
+.english-kids-page img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+/* ANA HERO RESMİ */
+.hero img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto 25px;
+}
+
+/* HAKKIMDA */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-section > img {
+    width: 42%;
+    flex-shrink: 0;
+}
+
+.about-section > div {
+    flex: 1;
+}
+
+/* TEK YATAY RESİM ALANLARI */
+.education-coaching,
+.exam-preparation,
+.translation-services,
+.english-education,
+.french-education {
+    text-align: center;
+}
+
+.education-coaching-image {
+    width: 100%;
+    text-align: center;
+}
+
+.education-coaching-image img,
+.exam-preparation img,
+.translation-services img,
+.english-education img,
+.french-education img {
+    display: block;
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ÇOCUKLAR */
+#cocuklar {
+    text-align: center;
+}
+
+.children-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.children-image {
+    flex: 1;
+}
+
+.children-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.children-text {
+    flex: 1;
+    text-align: left;
+}
+
+.children-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.children-card {
+    padding: 20px;
+}
+
+/* KIDS SAYFASI */
+.english-kids-page,
+body > section {
+    box-sizing: border-box;
+}
+
+.kids-banner {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* VİDEOLAR */
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+/* SES */
+audio {
+    max-width: 100%;
+}
+
+/* KARTLAR */
+.color-cards,
+.animals-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* İLETİŞİM */
+.contact-section {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* TELEFON / DAR EKRAN */
+@media (max-width: 900px) {
+
+    .hero,
+    .welcome-section,
+    .about-section,
+    .education-coaching,
+    .exam-preparation,
+    .translation-services,
+    .english-education,
+    .french-education,
+    #cocuklar,
+    .english-kids-page,
+    body > section,
+    .contact-section {
+        width: calc(100% - 20px);
+        padding: 25px 20px;
+    }
+
+.about-section,
+    .children-content {
+        flex-direction: column;
+    }
+
+    .about-section > img,
+    .children-image,
+    .children-text {
+        width: 100%;
+    }
+
+    .children-cards,
+    .color-cards,
+    .animals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
