@@ -1755,35 +1755,20 @@ section img {
 }
 
 /* =========================================================
-   ÇOCUKLAR GÖRSELİ — BÜYÜT
+   ÇOCUKLAR GÖRSELİ — DAHA BÜYÜK VE ORANTILI
    ========================================================= */
 
 .children-section img {
-    transform: scale(1.60);
-    transform-origin: center center;
-}
-
-/* ÇOCUKLAR İÇİN İNGİLİZCE & FRANSIZCA - RESMİ BÜYÜT */
-.children-section img {
     width: 100% !important;
-    max-width: 900px !important;
+    max-width: 1100px !important;
     height: auto !important;
-    transform: scale(1.65) !important;
+
+    transform: scale(1.90) !important;
     transform-origin: center center !important;
+
     display: block !important;
-    margin: 35px auto !important;
+    margin: 55px auto !important;
+
     position: relative;
     z-index: 2;
-}
-
-/* Resmin yanındaki / altındaki yazıları biraz küçült */
-.children-section h2,
-.children-section h3 {
-    position: relative;
-    z-index: 3;
-}
-
-.children-section p {
-    position: relative;
-    z-index: 3;
 }
