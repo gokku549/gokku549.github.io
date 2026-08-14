@@ -1775,3 +1775,39 @@ section img {
 
     transform: none !important;
 }
+
+/* =========================================================
+   ÇOCUKLAR GÖRSELİ — SON BÜYÜTME
+   ========================================================= */
+
+#cocuklar .children-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 25px !important;
+}
+
+#cocuklar .children-image {
+    flex: 0 0 68% !important;
+    width: 68% !important;
+    max-width: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+}
+
+#cocuklar .children-image img {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    transform: none !important;
+}
+
+#cocuklar .children-text {
+    flex: 0 0 29% !important;
+    width: 29% !important;
+}
