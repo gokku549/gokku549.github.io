@@ -1884,3 +1884,24 @@ section img {
     object-fit: contain !important;
     object-position: center center !important;
 }
+
+/* =========================================================
+   ENGLISH FOR KIDS — TEK BÜYÜK YATAY BEYAZ SAYFA
+   İÇERİKLERE DOKUNMA
+   ========================================================= */
+
+.english-kids-page {
+    width: 92% !important;
+    max-width: 1250px !important;
+    margin: 35px auto !important;
+    padding: 45px 55px !important;
+
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12) !important;
+
+    box-sizing: border-box !important;
+    overflow: visible !important;
+
+    min-height: 700px !important;
+}
