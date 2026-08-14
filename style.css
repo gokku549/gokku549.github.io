@@ -1753,3 +1753,12 @@ section img {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================
+   ÇOCUKLAR GÖRSELİ — BÜYÜT
+   ========================================================= */
+
+.children-section img {
+    transform: scale(1.25);
+    transform-origin: center center;
+}
