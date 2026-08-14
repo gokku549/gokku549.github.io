@@ -1872,3 +1872,15 @@ section img {
     transform: scale(1.12);
     transform-origin: center center;
 }
+
+/* ENGLISH FOR KIDS ANA GÖRSEL */
+.english-kids-main {
+    width: 115% !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+    margin-left: -7.5% !important;
+    margin-right: -7.5% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+}
