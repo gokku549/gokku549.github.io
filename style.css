@@ -1535,3 +1535,37 @@ section img {
     }
 
 }
+
+/* =========================================================
+   PROFESYONEL ÇEVİRİ HİZMETLERİ — TEK BÜYÜK GÖRSEL
+   ========================================================= */
+
+.translation-services {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.translation-services img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* TELEFON */
+
+@media (max-width: 768px) {
+
+    .translation-services {
+        padding: 20px 10px;
+    }
+
+    .translation-services img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
