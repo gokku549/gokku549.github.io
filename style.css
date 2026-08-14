@@ -1569,3 +1569,58 @@ section img {
     }
 
 }
+
+/* =========================================================
+   İNGİLİZCE EĞİTİM — TEK BÜYÜK GÖRSEL
+   ========================================================= */
+
+.english-education {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.english-education img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* =========================================================
+   FRANSIZCA EĞİTİM — TEK BÜYÜK GÖRSEL
+   ========================================================= */
+
+.french-education {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.french-education img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* TELEFON */
+
+@media (max-width: 768px) {
+
+    .english-education,
+    .french-education {
+        padding: 20px 10px;
+    }
+
+    .english-education img,
+    .french-education img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
