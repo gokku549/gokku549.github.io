@@ -1906,22 +1906,3 @@ section img {
     min-height: 700px !important;
 }
 
-/* =========================================================
-   1. ADIM — ÇOCUKLAR İÇİN İNGİLİZCE & FRANSIZCA
-   ÖNDEKİ BEYAZ SAYFAYI BÜYÜT
-   ========================================================= */
-
-#cocuklar {
-    width: 96% !important;
-    max-width: 1450px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    position: relative !important;
-    z-index: 10 !important;
-}
-
-/* Çocuklar İçin İngilizce & Fransızca — resmi büyüt */
-.children-section img {
-    transform: scale(1.6);
-    transform-origin: center center;
-}
