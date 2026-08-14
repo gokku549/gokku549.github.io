@@ -1811,3 +1811,36 @@ section img {
     flex: 0 0 29% !important;
     width: 29% !important;
 }
+
+/* =========================================================
+   ÇOCUKLAR — RESİM BÜYÜK, YAZILAR SAĞDA
+   ========================================================= */
+
+#cocuklar .children-content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 25px !important;
+}
+
+#cocuklar .children-image {
+    flex: 0 0 70% !important;
+    width: 70% !important;
+    max-width: none !important;
+}
+#cocuklar .children-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+#cocuklar .children-text {
+    flex: 0 0 30% !important;
+    width: 30% !important;
+}
+
+#cocuklar .children-text p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
