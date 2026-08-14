@@ -1441,5 +1441,67 @@ section img {
     text-align: center;
 }
 
+/* =========================================================
+   SINAV HAZIRLIĞI — YATAY GÖRSEL + SAĞDA YAZILAR
+   ========================================================= */
 
+.exam-preparation-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.exam-preparation-image {
+    flex: 0 0 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exam-preparation-image img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.exam-preparation-text {
+    flex: 1;
+}
+
+.exam-preparation-text p {
+    margin-top: 0;
+}
+
+.exam-preparation-text ul {
+    margin-top: 18px;
+}
+
+
+/* TELEFON / KÜÇÜK EKRAN */
+
+@media (max-width: 768px) {
+
+    .exam-preparation-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .exam-preparation-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .exam-preparation-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .exam-preparation-text {
+        width: 100%;
+    }
+
+}
 
