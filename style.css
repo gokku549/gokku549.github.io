@@ -2472,3 +2472,13 @@ audio {
         grid-template-columns: 1fr;
     }
 }
+
+/* Conversation Classroom Image */
+.conversation-classroom-image {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 18px;
+}
