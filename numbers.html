@@ -411,18 +411,33 @@ audio.play();
 }
 
 
-</script>
+<script>
 
-function playFrenchSound(number){
+function playSound(number){
 
-let audio = new Audio("audio/french-number-" + number + ".mp3");
-
-audio.play();
+    let audio = new Audio("audio/number-" + number + ".mp3");
+    audio.play();
 
 }
 
+function playAll(){
+
+    let audio = new Audio("audio/numbers-1-20.mp3");
+    audio.play();
+
+}
+
+function playFrenchSound(number){
+
+    let audio = new Audio("audio/french-number-" + number + ".mp3");
+    audio.play();
+
+}
+
+</script>
+
 </body>
-</html>
+
 
 
 
