@@ -2391,3 +2391,25 @@ audio {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* =========================
+   ENGLISH NUMBERS 1-20
+========================= */
+
+.english-kids-page button[onclick^="playNumber"] {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffcc70, #ff8a65);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.english-kids-page button[onclick^="playNumber"]:hover {
+    transform: scale(1.05);
+}
