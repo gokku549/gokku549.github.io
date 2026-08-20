@@ -2891,3 +2891,24 @@ audio {
         font-size: 18px;
     }
 }
+
+/* =========================================================
+   SON DÜZENLEMELER
+   ========================================================= */
+
+/* 🔑 GÜVENLİ GİRİŞ — ANAHTAR KIRMIZI */
+#auth-area .key-icon {
+    color: #e53935 !important;
+    font-size: 44px !important;
+}
+
+/* ÖZEL MESAJ KUTUSU — ORTADA, BÜYÜK, KALIN, SİYAH */
+#mesaj-kutusu .message-header h2 {
+    color: #000000 !important;
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    margin: 0 0 25px 0 !important;
+}
