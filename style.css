@@ -2716,3 +2716,178 @@ audio {
     background: #20cfcf;
     border-radius: 10px;
 }
+
+/* =========================================================
+   GÜVENLİ GİRİŞ — SON TASARIM
+   ========================================================= */
+
+#auth-area {
+    width: 100%;
+    max-width: 850px;
+    margin: 50px auto 35px;
+    text-align: center;
+}
+
+/* 🔑 GÜVENLİ GİRİŞ BAŞLIĞI */
+#auth-area h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    margin: 0 0 35px;
+
+    color: #000000;
+    font-size: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* KIRMIZI ANAHTAR */
+#auth-area .key-icon {
+    color: #e53935;
+    font-size: 44px;
+}
+
+/* E-POSTA + ŞİFRE */
+.auth-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.auth-inputs input {
+    width: 90%;
+    max-width: 650px;
+    min-height: 65px;
+
+   padding: 0 22px;
+
+    border: 3px solid #8e44ad;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    color: #222;
+    font-size: 19px;
+    font-weight: 700;
+
+    text-align: center;
+    outline: none;
+
+   transition: 0.2s ease;
+}
+
+.auth-inputs input:focus {
+    border-color: #20cfcf;
+    box-shadow: 0 0 12px rgba(32, 207, 207, 0.35);
+}
+
+/* =========================================================
+   GİRİŞ / HESAP OLUŞTUR BUTONLARI
+   ========================================================= */
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.auth-buttons button {
+    width: 270px;
+    min-height: 68px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 16px;
+
+    color: #ffffff;
+
+   font-size: 20px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* 🔴 GİRİŞ YAP */
+#login-button {
+    background: #e53935;
+    box-shadow: 0 6px 15px rgba(229, 57, 53, 0.30);
+}
+
+/* 🔵 HESAP OLUŞTUR */
+#register-button {
+    background: #1976d2;
+    box-shadow: 0 6px 15px rgba(25, 118, 210, 0.30);
+}
+
+/* HOVER */
+.auth-buttons button:hover {
+    transform: translateY(-4px);
+}
+
+/* MESAJ */
+#auth-message {
+    margin-top: 22px;
+
+    color: #6a1b9a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* 🩵 TURKUAZ ALT ÇİZGİ */
+#auth-area::after {
+    content: "";
+    display: block;
+
+    width: 220px;
+    height: 5px;
+
+    margin: 28px auto 0;
+
+    background: #20cfcf;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   MOBİL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #auth-area h3 {
+        font-size: 27px;
+    }
+
+    #auth-area .key-icon {
+        font-size: 38px;
+    }
+
+    .auth-inputs input {
+        width: 100%;
+        min-height: 60px;
+        font-size: 17px;
+    }
+
+   .auth-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+        min-height: 62px;
+        font-size: 18px;
+    }
+}
