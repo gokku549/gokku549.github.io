@@ -1,5 +1,5 @@
 <!DOCTYPE html>        
-<html lang="tr">
+<html lang="tr">      
 
 <head>       
     <meta charset="UTF-8">     
@@ -1549,42 +1549,28 @@
 
     <h2>📩 GELEN MESAJLAR</h2>
 
-    <!-- DENEME MESAJI -->
+    <div id="messages-list">
+        <p>📩 Mesajlar yükleniyor...</p>
+    </div>
 
-    <div class="message-item">
+    <div id="message-reply" style="display: none;">
 
-        <div class="message-sender">
-            🎓 ÖĞRENCİ — AYŞE
-        </div>
+        <h3>✉️ MESAJI CEVAPLA</h3>
 
-        <div class="message-text">
-            Merhaba öğretmenim, yarınki İngilizce dersi saat kaçta?
-        </div>
+        <textarea
+            id="reply-text"
+            placeholder="Cevabınızı buraya yazın..."
+            rows="5"
+        ></textarea>
 
-     <button type="button" class="open-message" onclick="openMessage()">
-      MESAJI AÇ
-    </button>   
+        <button type="button" onclick="sendReply()">
+            📤 CEVABI GÖNDER
+        </button>
+
+        <p id="reply-status"></p>
 
     </div>
-    
-   <div id="message-reply" style="display: none;">
 
-    <h3>✉️ MESAJI CEVAPLA</h3>
-
-    <textarea
-        id="reply-text"
-        placeholder="Cevabınızı buraya yazın..."
-        rows="5"
-    ></textarea>
-
-    <button type="button" onclick="sendReply()">
-        📤 CEVABI GÖNDER
-    </button>
-
-    <p id="reply-status"></p>
-
-</div>
-    
 </section>
             
 
