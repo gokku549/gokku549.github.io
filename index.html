@@ -1577,7 +1577,28 @@ function playNumber(number) {
 
 </script>
 
-    
+<script>
+function playNumber(number) {
+    const audio = new Audio("audio/" + number + ".mp3");
+    audio.play();
+}
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAtXffJpB6koTb08Yk-k2yEjgQt347MLy0",
+    authDomain: "ogretmen-mesaj-kutusu.firebaseapp.com",
+    projectId: "ogretmen-mesaj-kutusu",
+    storageBucket: "ogretmen-mesaj-kutusu.firebasestorage.app",
+    messagingSenderId: "444399275224",
+    appId: "1:444399275224:web:9cf8d89800f7d833efdbad"
+  };
+
+  const app = initializeApp(firebaseConfig);
+</script>
+
 </body>
 
 </html>
