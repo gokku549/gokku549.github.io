@@ -2991,3 +2991,414 @@ audio {
     opacity: 0.9;
 }
 
+/* =====================================================
+   📩 PROFESYONEL MESAJ KUTUSU
+===================================================== */
+
+.message-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e2e8f0;
+}
+
+/* BAŞLIK */
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.message-logo {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: white;
+    border-radius: 16px;
+    font-size: 30px;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+.message-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* ROL KUTULARI */
+
+.message-roles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.role-card {
+    min-height: 95px;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 16px;
+    color: #172033;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    transition: 0.2s ease;
+}
+
+.role-card span {
+    font-size: 30px;
+}
+
+.role-card strong {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.role-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ROL RENKLERİ */
+
+.role-card.teacher {
+    background: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.role-card.student {
+    background: #f0fdf4;
+    border-color: #86efac;
+}
+
+.role-card.parent {
+    background: #fff7ed;
+    border-color: #fdba74;
+}
+
+.role-card.school {
+    background: #faf5ff;
+    border-color: #d8b4fe;
+}
+
+.role-card.institution {
+    background: #f0fdfa;
+    border-color: #5eead4;
+}
+
+/* AÇIKLAMA */
+
+.message-description {
+    padding: 16px 20px;
+    margin: 0 0 25px;
+    border-radius: 12px;
+    background: #172033;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* GİRİŞ ALANI */
+
+#auth-area {
+    padding: 28px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    border: 2px solid #dbe3ef;
+    border-radius: 18px;
+}
+
+#auth-area h3 {
+    margin: 0 0 20px;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.key-icon {
+    margin-right: 7px;
+}
+
+.auth-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.auth-inputs input,
+#receiver-email,
+#new-message-text,
+#reply-text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.auth-inputs input {
+    min-height: 52px;
+}
+
+.auth-inputs input::placeholder,
+#receiver-email::placeholder,
+#new-message-text::placeholder,
+#reply-text::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+.auth-inputs input:focus,
+#receiver-email:focus,
+#new-message-text:focus,
+#reply-text:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* BUTONLAR */
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.auth-buttons button,
+#send-new-message-button,
+#message-reply button {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#login-button,
+#send-new-message-button,
+#message-reply button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+#register-button {
+    background: #0f766e;
+    color: #ffffff;
+}
+
+.auth-buttons button:hover,
+#send-new-message-button:hover,
+#message-reply button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* MESAJ ALANI */
+
+#inbox-area {
+    margin-top: 30px;
+}
+
+#inbox-area > h2 {
+    margin-bottom: 20px;
+    color: #172033;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* YENİ MESAJ */
+
+#new-message-area {
+    padding: 28px;
+    margin-bottom: 25px;
+    background: #eff6ff;
+    border: 2px solid #bfdbfe;
+    border-radius: 18px;
+}
+
+#new-message-area h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #172033;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#new-message-text,
+#reply-text {
+    display: block;
+    margin-top: 14px;
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+#send-new-message-button {
+    margin-top: 15px;
+}
+
+/* GELEN MESAJLAR */
+
+#messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-item {
+    padding: 22px;
+    background: #ffffff;
+    border: 2px solid #dbe3ef;
+    border-left: 6px solid #2563eb;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.message-sender {
+    margin-bottom: 12px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.message-text {
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 10px;
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+
+.message-item button {
+    margin-top: 14px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.message-item button:hover {
+    background: #1d4ed8;
+}
+
+/* CEVAP ALANI */
+
+#message-reply {
+    margin-top: 25px;
+    padding: 28px;
+    background: #f0fdf4;
+    border: 2px solid #86efac;
+    border-radius: 18px;
+}
+
+#message-reply h3 {
+    margin-top: 0;
+    color: #166534;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#reply-status,
+#new-message-status,
+#auth-message {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+/* MOBİL */
+
+@media (max-width: 800px) {
+
+    .message-section {
+        margin: 35px 15px;
+        padding: 22px;
+    }
+
+    .message-roles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .auth-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+    }
+
+    .message-header h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .message-section {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .message-roles {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .role-card {
+        min-height: 82px;
+        padding: 12px 5px;
+    }
+
+    .role-card span {
+        font-size: 25px;
+    }
+
+    .role-card strong {
+        font-size: 12px;
+    }
+
+    #auth-area,
+    #new-message-area,
+    #message-reply {
+        padding: 18px;
+    }
+
+    .message-header h2 {
+        font-size: 21px;
+    }
+}
