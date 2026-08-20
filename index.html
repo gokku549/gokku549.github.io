@@ -1459,28 +1459,68 @@
 
 <section id="mesaj-kutusu" class="message-section">
 
-    <h2>🔐 Özel Mesaj Kutusu</h2>
+    <div class="message-header">
 
-    <p>
-        Öğrenci, öğretmen, veli ve kurumlar için
-        güvenli özel mesajlaşma alanı.
+        <div class="message-logo">
+            💬
+        </div>
+
+        <h2>Özel Mesaj Kutusu</h2>
+
+        <p>
+            Öğrenci • Öğretmen • Veli • Okul • Kurum
+        </p>
+
+    </div>
+
+
+    <div class="message-roles">
+
+    <div class="role-card teacher">
+            <span>👩‍🏫</span>
+            <strong>Öğretmen</strong>
+        </div>
+
+        <div class="role-card student">
+            <span>🎓</span>
+            <strong>Öğrenci</strong>
+        </div>
+
+        <div class="role-card parent">
+            <span>👨‍👩‍👧</span>
+            <strong>Veli</strong>
+        </div>
+
+        <div class="role-card school">
+         <span>🏫</span>
+            <strong>Okul</strong>
+        </div>
+
+        <div class="role-card institution">
+            <span>🏢</span>
+            <strong>Kurum</strong>
+        </div>
+
+    </div>
+     <p class="message-description">
+        🔐 Güvenli ve özel iletişim alanı
     </p>
-    
- <div id="auth-area">
+
+
+    <div id="auth-area">
 
         <h3>🔑 Güvenli Giriş</h3>
-
-        <input
+         <input
             type="email"
             id="login-email"
             placeholder="E-posta adresiniz">
- 
-  <input
+
+        <input
             type="password"
             id="login-password"
-            placeholder="Şifreniz">
+            placeholder="Şifreniz"> 
 
-        <button type="button" id="login-button">
+       <button type="button" id="login-button">
             🔐 Giriş Yap
         </button>
 
@@ -1490,9 +1530,10 @@
 
         <p id="auth-message"></p>
 
-    </div>  
-    
-    </section>
+    </div>
+
+</section> 
+        
 
     <!-- =========================
          İLETİŞİM
@@ -1617,12 +1658,6 @@ function playNumber(number) {
 
 </script>
 
-<script>
-function playNumber(number) {
-    const audio = new Audio("audio/" + number + ".mp3");
-    audio.play();
-}
-</script>
 
 <script type="module">
 
