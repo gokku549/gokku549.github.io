@@ -2927,3 +2927,67 @@ audio {
     filter: sepia(1) saturate(5) hue-rotate(75deg) brightness(0.85);
 }
 
+/* =====================================================
+   GELEN MESAJLAR
+===================================================== */
+
+#inbox-area {
+    width: 100%;
+    max-width: 850px;
+    margin: 50px auto 30px;
+    padding: 30px;
+    background: #ffffff;
+    text-align: center;
+}
+
+#inbox-area h2 {
+    margin: 0 0 25px;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.message-item {
+    width: 100%;
+    padding: 22px;
+    margin: 20px auto;
+    background: #f7f8fc;
+    border-left: 6px solid #1976d2;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.message-sender {
+    color: #000000;
+    font-size: 19px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.message-text {
+    color: #333333;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.open-message {
+    display: block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #1976d2;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.open-message:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
