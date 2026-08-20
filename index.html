@@ -2017,7 +2017,81 @@ async function sendReply() {
         replyStatus.style.color = "#e53935";
     }
 }
-   
+
+// =========================
+// YENİ MESAJ GÖNDER
+// =========================
+
+const sendNewMessageButton =
+    document.getElementById("send-new-message-button");
+
+sendNewMessageButton.addEventListener("click", async () => {
+
+    const receiverEmail =
+        document.getElementById("receiver-email").value.trim();
+
+    const messageText =
+        document.getElementById("new-message-text").value.trim();
+
+    const status =
+        document.getElementById("new-message-status");
+
+    const user = auth.currentUser;
+
+    if (!user) {
+        status.textContent =
+            "🔐 Önce giriş yapmalısınız.";
+        status.style.color = "#e53935";
+        return;
+    }
+
+    if (!receiverEmail) {
+        status.textContent =
+            "⚠️ Alıcının e-posta adresini yazın.";
+        status.style.color = "#e53935";
+        return;
+    }
+
+    if (!messageText) {
+        status.textContent =
+            "⚠️ Lütfen mesajınızı yazın.";
+        status.style.color = "#e53935";
+        return;
+    }
+
+    try {
+
+        await addDoc(collection(db, "messages"), {
+
+            senderName: user.email,
+            senderEmail: user.email,
+
+            receiverEmail: receiverEmail,
+
+            text: messageText,
+
+            createdAt: serverTimestamp()
+
+        });
+
+        document.getElementById("receiver-email").value = "";
+        document.getElementById("new-message-text").value = "";
+
+        status.textContent =
+            "✅ Mesajınız gönderildi.";
+        status.style.color = "#168a45";
+
+    } catch (error) {
+
+        console.error(error);
+
+        status.textContent =
+            "❌ Mesaj gönderilemedi.";
+        status.style.color = "#e53935";
+    }
+
+});    
+    
 </script>
 
 </body>
