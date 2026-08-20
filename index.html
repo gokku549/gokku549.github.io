@@ -1710,13 +1710,7 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
 
-import {
-    getFirestore,
-    collection,
-    onSnapshot
-} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
-    
-import {
+    import {
   getFirestore,
   collection,
   addDoc,
@@ -1724,8 +1718,8 @@ import {
   orderBy,
   onSnapshot,
   serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js"; 
-
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+    
  // =========================
   // FIREBASE
   // =========================
@@ -1967,25 +1961,55 @@ function openMessage() {
 
 function sendReply() {
 
+async function sendReply() {
+
     const replyText = document.getElementById("reply-text");
     const replyStatus = document.getElementById("reply-status");
 
-    if (replyText.value.trim() === "") {
+    const text = replyText.value.trim();
 
-        replyStatus.textContent = "⚠️ Lütfen önce cevabınızı yazın.";
+    if (!text) {
+        replyStatus.textContent = "⚠️ Lütfen cevabınızı yazın.";
         replyStatus.style.color = "#e53935";
-
         return;
     }
 
-    replyStatus.textContent = "✅ CEVABINIZ GÖNDERİLDİ.";
+    const user = auth.currentUser;
 
-    replyStatus.style.color = "#168a45";
+    if (!user) {
+        replyStatus.textContent = "🔐 Önce giriş yapmalısınız.";
+        replyStatus.style.color = "#e53935";
+        return;
+    }
 
-    replyText.value = "";
+    try {
 
+        await addDoc(collection(db, "messages"), {
+
+            senderName: user.email,
+
+            text: text,
+
+            createdAt: new Date()
+
+        });
+
+        replyStatus.textContent = "✅ Cevabınız gönderildi.";
+        replyStatus.style.color = "#168a45";
+
+        replyText.value = "";
+
+    } catch (error) {
+
+        console.error(error);
+
+        replyStatus.textContent =
+            "❌ Mesaj gönderilemedi.";
+
+        replyStatus.style.color = "#e53935";
+    }
 }
-
+   
 </script>
 
 </body>
