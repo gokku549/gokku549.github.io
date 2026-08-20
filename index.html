@@ -1710,11 +1710,12 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
 
-    import {
+import {
   getFirestore,
   collection,
   addDoc,
   query,
+  where,
   orderBy,
   onSnapshot,
   serverTimestamp
@@ -1741,43 +1742,68 @@ import {
 
     const messagesList = document.getElementById("messages-list");
 
-onSnapshot(collection(db, "messages"), (snapshot) => {
+    onAuthStateChanged(auth, (user) => {
 
-    messagesList.innerHTML = "";
-
-    if (snapshot.empty) {
-        messagesList.innerHTML = "<p>📭 Henüz mesaj yok.</p>";
+    if (!user) {
+        messagesList.innerHTML =
+            "<p>🔐 Mesajlarınızı görmek için giriş yapınız.</p>";
         return;
     }
 
-    snapshot.forEach((doc) => {
+    const q = query(
+        collection(db, "messages"),
+        where("receiverEmail", "==", user.email),
+        orderBy("createdAt", "asc")
+    );
 
-        const message = doc.data();
+    onSnapshot(q, (snapshot) => {
 
-        const messageBox = document.createElement("div");
+        messagesList.innerHTML = "";
 
-        messageBox.className = "message-item";
+        if (snapshot.empty) {
+            messagesList.innerHTML =
+                "<p>📭 Henüz gelen mesaj yok.</p>";
+            return;
+        }
 
-        messageBox.innerHTML = `
-            <div class="message-sender">
-                👤 ${message.senderName || "Gönderen"}
-            </div>
+        snapshot.forEach((doc) => {
 
-            <div class="message-text">
-                ${message.text || ""}
-            </div>
+            const message = doc.data();
 
-            <button type="button" onclick="openMessage()">
-                ✉️ MESAJI AÇ
-            </button>
-        `;
+            const messageBox =
+                document.createElement("div");
 
-        messagesList.appendChild(messageBox);
+            messageBox.className = "message-item";
 
+            messageBox.innerHTML = `
+                <div class="message-sender">
+                    👤 ${message.senderName || message.senderEmail || "Gönderen"}
+                </div>
+
+                <div class="message-text">
+                    ${message.text || ""}
+                </div>
+
+                <button type="button"
+                    onclick="openMessage('${message.senderEmail || ""}')">
+                    ✉️ MESAJI AÇ
+                </button>
+            `;
+
+            messagesList.appendChild(messageBox);
+        });
+
+    }, (error) => {
+
+        console.error(error);
+
+        messagesList.innerHTML =
+            "<p>❌ Mesajlar yüklenemedi.</p>";
     });
 
-    });
-    
+});
+
+
    // =========================
 // GELEN MESAJLARI OKU
 // =========================
@@ -1899,9 +1925,14 @@ onSnapshot(collection(db, "messages"), (snapshot) => {
 
 <script>
 
-function openMessage() {
+let currentReplyTo = "";
 
-    const replyBox = document.getElementById("message-reply");
+window.openMessage = function (senderEmail) {
+
+    currentReplyTo = senderEmail;
+
+    const replyBox =
+        document.getElementById("message-reply");
 
     replyBox.style.display = "block";
 
@@ -1909,8 +1940,7 @@ function openMessage() {
         behavior: "smooth",
         block: "center"
     });
-
-}
+};
 
 async function sendReply() {
     
