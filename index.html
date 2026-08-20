@@ -1,5 +1,5 @@
 <!DOCTYPE html>        
-<html lang="tr">      
+<html lang="tr">     
 
 <head>       
     <meta charset="UTF-8">     
@@ -1549,6 +1549,33 @@
 
     <h2>📩 GELEN MESAJLAR</h2>
 
+    <!-- =========================
+     YENİ MESAJ GÖNDER
+========================= -->
+
+<div id="new-message-area">
+
+    <h3>💬 YENİ MESAJ</h3>
+
+    <input
+        type="email"
+        id="receiver-email"
+        placeholder="Mesaj göndereceğiniz kişinin e-postası"
+    >
+
+    <textarea
+        id="new-message-text"
+        placeholder="Mesajınızı buraya yazın..."
+        rows="5"
+    ></textarea>
+
+    <button type="button" id="send-new-message-button">
+        📤 MESAJ GÖNDER
+    </button>
+
+    <p id="new-message-status"></p>
+
+</div>
     <div id="messages-list">
         <p>📩 Mesajlar yükleniyor...</p>
     </div>
