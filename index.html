@@ -1711,6 +1711,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
 
 import {
+    getFirestore,
+    collection,
+    onSnapshot
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+    
+import {
   getFirestore,
   collection,
   addDoc,
@@ -1738,6 +1744,99 @@ import {
   const auth = getAuth(app);
 
   const db = getFirestore(app);
+
+    const messagesList = document.getElementById("messages-list");
+
+onSnapshot(collection(db, "messages"), (snapshot) => {
+
+    messagesList.innerHTML = "";
+
+    if (snapshot.empty) {
+        messagesList.innerHTML = "<p>📭 Henüz mesaj yok.</p>";
+        return;
+    }
+
+    snapshot.forEach((doc) => {
+
+        const message = doc.data();
+
+        const messageBox = document.createElement("div");
+
+        messageBox.className = "message-item";
+
+        messageBox.innerHTML = `
+            <div class="message-sender">
+                👤 ${message.senderName || "Gönderen"}
+            </div>
+
+            <div class="message-text">
+                ${message.text || ""}
+            </div>
+
+            <button type="button" onclick="openMessage()">
+                ✉️ MESAJI AÇ
+            </button>
+        `;
+
+        messagesList.appendChild(messageBox);
+
+    });
+
+    
+   // =========================
+// GELEN MESAJLARI OKU
+// =========================
+
+const messagesList = document.getElementById("messages-list");
+
+const messagesQuery = query(
+    collection(db, "messages"),
+    orderBy("createdAt", "desc")
+);
+
+onSnapshot(messagesQuery, (snapshot) => {
+
+    messagesList.innerHTML = "";
+
+    if (snapshot.empty) {
+
+        messagesList.innerHTML =
+            "<p>📭 Henüz gelen mesaj yok.</p>";
+
+        return;
+    }
+
+    snapshot.forEach((doc) => {
+
+        const message = doc.data();
+
+        const messageItem =
+            document.createElement("div");
+
+        messageItem.className =
+            "message-item";
+
+        messageItem.innerHTML = `
+            <div class="message-sender">
+                👤 ${message.senderName || "Gönderen"}
+            </div>
+
+            <div class="message-text">
+                ${message.text || ""}
+            </div>
+
+            <button
+                type="button"
+                class="open-message">
+                ✉️ MESAJI AÇ
+            </button>
+        `;
+
+        messagesList.appendChild(messageItem);
+
+    });
+
+});
     
   // =========================
   // HTML ELEMANLARI
