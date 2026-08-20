@@ -2523,3 +2523,45 @@ audio {
     letter-spacing: 0.4px;
 }
 
+/* ÖZEL MESAJ KUTUSU - ROLLER */
+
+.message-roles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.message-roles .role-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.message-roles .role-card span {
+    font-size: 22px;
+}
+
+.message-roles .role-card strong {
+    color: #222222;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.message-description {
+    margin-left: 15px;
+    margin-top: 26px;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
