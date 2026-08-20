@@ -2565,3 +2565,149 @@ audio {
     text-transform: uppercase;
 }
 
+/* =========================
+   GÜVENLİ GİRİŞ
+========================= */
+
+#auth-area {
+    width: 100%;
+    max-width: 650px;
+    margin: 45px auto 30px auto;
+    text-align: center;
+}
+
+/* BAŞLIK */
+
+#auth-area h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0 0 30px 0;
+
+   color: #000000;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* KIRMIZI ANAHTAR */
+
+#auth-area .key-icon {
+    color: #e53935;
+    font-size: 38px;
+}
+
+/* E-POSTA VE ŞİFRE */
+
+.auth-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+   }
+
+.auth-inputs input {
+    width: 85%;
+    max-width: 520px;
+    min-height: 58px;
+
+    padding: 0 20px;
+
+    border: 3px solid #8e44ad;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #222222;
+    font-size: 17px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+    text-align: center;
+
+    outline: none;
+}
+
+.auth-inputs input:focus {
+    border-color: #20cfcf;
+    box-shadow: 0 0 10px rgba(32, 207, 207, 0.35);
+}
+
+/* BUTONLAR */
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.auth-buttons button {
+    min-width: 230px;
+    min-height: 62px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* KIRMIZI */
+
+#login-button {
+    background: #e53935;
+    box-shadow: 0 5px 12px rgba(229, 57, 53, 0.30);
+}
+
+/* MAVİ */
+
+#register-button {
+    background: #1976d2;
+    box-shadow: 0 5px 12px rgba(25, 118, 210, 0.30);
+}
+
+/* HOVER */
+
+.auth-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+/* MESAJ */
+
+#auth-message {
+    margin-top: 20px;
+
+ color: #6a1b9a;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* TURKUAZ VURGU */
+
+#auth-area::after {
+    content: "";
+    display: block;
+
+  width: 180px;
+    height: 5px;
+
+    margin: 25px auto 0 auto;
+
+    background: #20cfcf;
+    border-radius: 10px;
+}
