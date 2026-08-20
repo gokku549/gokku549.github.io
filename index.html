@@ -1950,7 +1950,9 @@ import {
 
 </script> 
 
-<script>
+// =========================
+// MESAJ AÇ VE CEVAPLA
+// =========================
 
 let currentReplyTo = "";
 
@@ -1958,8 +1960,7 @@ window.openMessage = function (senderEmail) {
 
     currentReplyTo = senderEmail;
 
-    const replyBox =
-        document.getElementById("message-reply");
+    const replyBox = document.getElementById("message-reply");
 
     replyBox.style.display = "block";
 
@@ -1969,24 +1970,47 @@ window.openMessage = function (senderEmail) {
     });
 };
 
-async function sendReply() {
-    
-    const replyText = document.getElementById("reply-text");
-    const replyStatus = document.getElementById("reply-status");
 
-    const text = replyText.value.trim();
+window.sendReply = async function () {
+
+    const replyText =
+        document.getElementById("reply-text");
+
+    const replyStatus =
+        document.getElementById("reply-status");
+
+    const text =
+        replyText.value.trim();
 
     if (!text) {
-        replyStatus.textContent = "⚠️ Lütfen cevabınızı yazın.";
+
+        replyStatus.textContent =
+            "⚠️ Lütfen cevabınızı yazın.";
+
         replyStatus.style.color = "#e53935";
+
         return;
     }
 
     const user = auth.currentUser;
 
     if (!user) {
-        replyStatus.textContent = "🔐 Önce giriş yapmalısınız.";
+
+        replyStatus.textContent =
+            "🔐 Önce giriş yapmalısınız.";
+
         replyStatus.style.color = "#e53935";
+
+        return;
+    }
+
+    if (!currentReplyTo) {
+
+        replyStatus.textContent =
+            "❌ Mesaj gönderen bulunamadı.";
+
+        replyStatus.style.color = "#e53935";
+
         return;
     }
 
@@ -1996,13 +2020,19 @@ async function sendReply() {
 
             senderName: user.email,
 
+            senderEmail: user.email,
+
+            receiverEmail: currentReplyTo,
+
             text: text,
 
-            createdAt: new Date()
+            createdAt: serverTimestamp()
 
         });
 
-        replyStatus.textContent = "✅ Cevabınız gönderildi.";
+        replyStatus.textContent =
+            "✅ Cevabınız gönderildi.";
+
         replyStatus.style.color = "#168a45";
 
         replyText.value = "";
@@ -2016,7 +2046,8 @@ async function sendReply() {
 
         replyStatus.style.color = "#e53935";
     }
-}
+};
+
 
 // =========================
 // YENİ MESAJ GÖNDER
@@ -2024,6 +2055,7 @@ async function sendReply() {
 
 const sendNewMessageButton =
     document.getElementById("send-new-message-button");
+
 
 sendNewMessageButton.addEventListener("click", async () => {
 
@@ -2038,32 +2070,46 @@ sendNewMessageButton.addEventListener("click", async () => {
 
     const user = auth.currentUser;
 
+
     if (!user) {
+
         status.textContent =
             "🔐 Önce giriş yapmalısınız.";
+
         status.style.color = "#e53935";
+
         return;
     }
+
 
     if (!receiverEmail) {
+
         status.textContent =
             "⚠️ Alıcının e-posta adresini yazın.";
+
         status.style.color = "#e53935";
+
         return;
     }
 
+
     if (!messageText) {
+
         status.textContent =
             "⚠️ Lütfen mesajınızı yazın.";
+
         status.style.color = "#e53935";
+
         return;
     }
+
 
     try {
 
         await addDoc(collection(db, "messages"), {
 
             senderName: user.email,
+
             senderEmail: user.email,
 
             receiverEmail: receiverEmail,
@@ -2074,12 +2120,17 @@ sendNewMessageButton.addEventListener("click", async () => {
 
         });
 
+
         document.getElementById("receiver-email").value = "";
+
         document.getElementById("new-message-text").value = "";
+
 
         status.textContent =
             "✅ Mesajınız gönderildi.";
+
         status.style.color = "#168a45";
+
 
     } catch (error) {
 
@@ -2087,11 +2138,13 @@ sendNewMessageButton.addEventListener("click", async () => {
 
         status.textContent =
             "❌ Mesaj gönderilemedi.";
+
         status.style.color = "#e53935";
     }
 
-});    
-    
+});
+ 
+ 
 </script>
 
 </body>
