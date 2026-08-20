@@ -2912,3 +2912,9 @@ audio {
     text-align: center !important;
     margin: 0 0 25px 0 !important;
 }
+
+/* 🔑 GÜVENLİ GİRİŞ — ANAHTAR YEŞİL */
+#auth-area .key-icon {
+    color: #2e8b57 !important;
+    font-size: 44px !important;
+}
