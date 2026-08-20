@@ -1559,12 +1559,30 @@
             Merhaba öğretmenim, yarınki İngilizce dersi saat kaçta?
         </div>
 
-        <button type="button" class="open-message">
-            MESAJI AÇ
-        </button>
+     <button type="button" class="open-message" onclick="openMessage()">
+      MESAJI AÇ
+    </button>   
 
     </div>
+    
+   <div id="message-reply" style="display: none;">
 
+    <h3>✉️ MESAJI CEVAPLA</h3>
+
+    <textarea
+        id="reply-text"
+        placeholder="Cevabınızı buraya yazın..."
+        rows="5"
+    ></textarea>
+
+    <button type="button" onclick="sendReply()">
+        📤 CEVABI GÖNDER
+    </button>
+
+    <p id="reply-status"></p>
+
+</div>
+    
 </section>
             
     <h3>
@@ -1868,7 +1886,46 @@ function playNumber(number) {
   });
 
 </script> 
-    
+
+<script>
+
+function openMessage() {
+
+    const replyBox = document.getElementById("message-reply");
+
+    replyBox.style.display = "block";
+
+    replyBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+function sendReply() {
+
+    const replyText = document.getElementById("reply-text");
+    const replyStatus = document.getElementById("reply-status");
+
+    if (replyText.value.trim() === "") {
+
+        replyStatus.textContent = "⚠️ Lütfen önce cevabınızı yazın.";
+        replyStatus.style.color = "#e53935";
+
+        return;
+    }
+
+    replyStatus.textContent = "✅ CEVABINIZ GÖNDERİLDİ.";
+
+    replyStatus.style.color = "#168a45";
+
+    replyText.value = "";
+
+}
+
+</script>
+
 </body>
 
 </html>
