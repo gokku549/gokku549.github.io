@@ -1782,56 +1782,10 @@ onSnapshot(collection(db, "messages"), (snapshot) => {
 // GELEN MESAJLARI OKU
 // =========================
 
-const messagesList = document.getElementById("messages-list");
 
-const messagesQuery = query(
-    collection(db, "messages"),
-    orderBy("createdAt", "desc")
-);
+       
 
-onSnapshot(messagesQuery, (snapshot) => {
-
-    messagesList.innerHTML = "";
-
-    if (snapshot.empty) {
-
-        messagesList.innerHTML =
-            "<p>📭 Henüz gelen mesaj yok.</p>";
-
-        return;
-    }
-
-    snapshot.forEach((doc) => {
-
-        const message = doc.data();
-
-        const messageItem =
-            document.createElement("div");
-
-        messageItem.className =
-            "message-item";
-
-        messageItem.innerHTML = `
-            <div class="message-sender">
-                👤 ${message.senderName || "Gönderen"}
-            </div>
-
-            <div class="message-text">
-                ${message.text || ""}
-            </div>
-
-            <button
-                type="button"
-                class="open-message">
-                ✉️ MESAJI AÇ
-            </button>
-        `;
-
-        messagesList.appendChild(messageItem);
-
-    });
-
-});
+            
     
   // =========================
   // HTML ELEMANLARI
@@ -1958,11 +1912,8 @@ function openMessage() {
 
 }
 
-
-function sendReply() {
-
 async function sendReply() {
-
+    
     const replyText = document.getElementById("reply-text");
     const replyStatus = document.getElementById("reply-status");
 
