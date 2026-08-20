@@ -1625,7 +1625,20 @@ function playNumber(number) {
 </script>
 
 <script type="module">
+
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+ // =========================
+  // FIREBASE
+  // =========================
 
   const firebaseConfig = {
     apiKey: "AIzaSyAtXffJpB6koTb08Yk-k2yEjgQt347MLy0",
@@ -1637,8 +1650,119 @@ function playNumber(number) {
   };
 
   const app = initializeApp(firebaseConfig);
-</script>
 
+  const auth = getAuth(app);
+
+  // =========================
+  // HTML ELEMANLARI
+  // =========================
+
+  const emailInput =
+    document.getElementById("login-email");
+
+  const passwordInput =
+    document.getElementById("login-password");
+
+  const loginButton =
+    document.getElementById("login-button");
+
+  const registerButton =
+    document.getElementById("register-button");
+
+  const authMessage =
+    document.getElementById("auth-message");
+
+     // =========================
+  // HESAP OLUŞTUR
+  // =========================
+
+  registerButton.addEventListener("click", async () => {
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    if (!email || !password) {
+
+      authMessage.textContent =
+        "Lütfen e-posta ve şifrenizi giriniz.";
+
+      return;
+    }
+
+    try {
+
+      await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      authMessage.textContent =
+        "Hesabınız oluşturuldu.";
+
+    } catch (error) {
+
+      authMessage.textContent =
+        "Hesap oluşturulamadı: " + error.message;
+
+    }
+
+  });
+
+    // =========================
+  // GİRİŞ YAP
+  // =========================
+
+  loginButton.addEventListener("click", async () => {
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    if (!email || !password) {
+
+      authMessage.textContent =
+        "Lütfen e-posta ve şifrenizi giriniz.";
+
+      return;
+    }
+
+    try { 
+
+    await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      authMessage.textContent =
+        "Giriş başarılı.";
+
+    } catch (error) {
+
+      authMessage.textContent =
+        "Giriş yapılamadı. E-posta veya şifreyi kontrol ediniz.";
+
+    }
+
+  });
+
+   // =========================
+  // OTURUM KONTROLÜ
+  // =========================
+
+  onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+      authMessage.textContent =
+        "Giriş yapıldı: " + user.email;
+
+    }
+
+  });
+
+</script> 
+    
 </body>
 
 </html>
