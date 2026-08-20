@@ -2918,3 +2918,12 @@ audio {
     color: #2e8b57 !important;
     font-size: 44px !important;
 }
+
+/* 🔑 GÜVENLİ GİRİŞ ANAHTARI */
+#auth-area .key-icon {
+    font-size: 44px !important;
+
+    /* Emoji yerine yeşil anahtar görünümü */
+    filter: sepia(1) saturate(5) hue-rotate(75deg) brightness(0.85);
+}
+
