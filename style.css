@@ -1,7 +1,7 @@
 /* =========================================================
    ESRA GK ACADEMY — ANA TASARIM
    Mevcut index.html ile uyumludur.
-   ========================================================= */
+   ========================================================= */   
 
 * {     
     box-sizing: border-box;
@@ -3408,6 +3408,14 @@ audio {
   margin-right: 8px;
   vertical-align: middle;
   color: #16a34a;
+}
+
+.yeni-mesaj-kutusu .key-icon {
+    color: #16a34a;
+    font-size: 42px;
+    font-weight: 900;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 
