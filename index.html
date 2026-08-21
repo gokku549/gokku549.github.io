@@ -1554,15 +1554,7 @@ if (!user) {
     });
   });
 }
-       
-if (!user) {
-  user = await new Promise((resolve) => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      unsubscribe();
-      resolve(currentUser);
-    });
-  });
-}
+
 
 if (!user) {
   alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
