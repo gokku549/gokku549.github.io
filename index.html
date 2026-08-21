@@ -1544,6 +1544,16 @@ import {
 
  let user = auth.currentUser;
 
+console.log("MESAJ TEST - Firebase kullanıcısı:", user);
+
+if (!user) {
+  user = await new Promise((resolve) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      unsubscribe();
+      resolve(currentUser);
+    });
+  });
+}
 if (!user) {
   user = await new Promise((resolve) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
