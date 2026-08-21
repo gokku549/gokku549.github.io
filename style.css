@@ -3404,12 +3404,10 @@ audio {
 }
 
 .yesil-anahtar {
-  display: inline-block;
-  color: #16a34a;
   font-size: 34px;
-  font-weight: 900;
-  text-shadow: 0 2px 5px rgba(22, 163, 74, 0.25);
   margin-right: 8px;
-  transform: rotate(-35deg);
+  vertical-align: middle;
+  color: #16a34a;
 }
+
 
