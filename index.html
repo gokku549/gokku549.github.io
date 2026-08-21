@@ -1,5 +1,5 @@
 <!DOCTYPE html>        
-<html lang="tr">        
+<html lang="tr">          
 
 <head>       
     <meta charset="UTF-8">     
@@ -1536,6 +1536,84 @@ import {
 
   const db = getFirestore(app);
 
+   window.yeniMesajGonder = async function(event) {
+
+  if (event) {
+    event.preventDefault();
+  }
+
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
+    return false;
+  }
+
+  const adSoyad =
+    document.getElementById("yeni-adsoyad").value.trim();
+
+  const email =
+    document.getElementById("yeni-email").value.trim();
+
+  const telefon =
+    document.getElementById("yeni-telefon").value.trim();
+
+  const iletisim =
+    document.getElementById("yeni-iletisim").value;
+
+  const talep =
+    document.getElementById("yeni-talep").value.trim();
+
+  const mesaj =
+    document.getElementById("yeni-mesaj").value.trim();
+
+  const not =
+    document.getElementById("yeni-not").value.trim();
+
+  if (!adSoyad || !email || !iletisim || !talep || !mesaj) {
+    alert("⚠️ Lütfen gerekli alanları doldurunuz.");
+    return false;
+  }
+
+  try {
+
+    await addDoc(collection(db, "messages"), {
+
+      senderId: user.uid,
+      senderEmail: user.email,
+      senderName: adSoyad,
+
+      senderPhone: telefon,
+
+      receiverEmail: "esragkacademy@gmail.com",
+      receiverName: "Yönetici",
+
+      category: iletisim,
+      subject: talep,
+      text: mesaj,
+      note: not,
+
+      read: false,
+
+      createdAt: serverTimestamp()
+
+    });
+
+    alert("✅ Mesajınız başarıyla gönderildi.");
+
+    document.querySelector(".mesaj-form").reset();
+
+  } catch (error) {
+
+    console.error("Mesaj gönderme hatası:", error);
+
+    alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz.");
+
+  }
+
+  return false;
+}; 
+    
     const messagesList = document.getElementById("messages-list");
 
     onAuthStateChanged(auth, (user) => {
