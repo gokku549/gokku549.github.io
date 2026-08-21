@@ -1,5 +1,5 @@
 <!DOCTYPE html>        
-<html lang="tr">          
+<html lang="tr">           
 
 <head>       
     <meta charset="UTF-8">     
@@ -1542,9 +1542,9 @@ import {
     event.preventDefault();
   }
 
- let user = auth.currentUser;
+let user = auth.currentUser;
 
-console.log("MESAJ TEST - Firebase kullanıcısı:", user);
+alert("Firebase kullanıcı: " + (user ? user.email : "YOK"));
 
 if (!user) {
   user = await new Promise((resolve) => {
@@ -1554,6 +1554,7 @@ if (!user) {
     });
   });
 }
+       
 if (!user) {
   user = await new Promise((resolve) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
