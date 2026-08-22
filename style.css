@@ -3687,3 +3687,12 @@ audio {
     margin-right: auto !important;
     box-sizing: border-box !important;
 }
+
+.mesaj-kutu,
+.mesaj-kutusu {
+    width: 96% !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
