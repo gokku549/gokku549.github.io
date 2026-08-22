@@ -3874,3 +3874,86 @@ audio {
     background: #ffffff !important;
     border-radius: 24px !important;
 }
+
+/* =========================================
+   MESAJ KUTUSU - SON DÜZEN
+========================================= */
+
+/* Ana beyaz sayfa diğer sayfalarla aynı genişlikte */
+body > #mesaj-kutusu {
+    width: min(1100px, 92%) !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 35px 42px 45px !important;
+    box-sizing: border-box !important;
+}
+
+/* 6 FORM KUTUSU: 2 + 2 + 2 */
+#mesaj-kutusu .mesaj-form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Araya yanlışlıkla giren eski kategori yazıları görünmesin */
+#mesaj-kutusu .mesaj-form-grid > .mesaj-kategorileri {
+    display: none !important;
+}
+
+/* Bütün kutular eşit genişlikte */
+#mesaj-kutusu .mesaj-form-grid .mesaj-alan {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Input ve textarea */
+#mesaj-kutusu .mesaj-form-grid input,
+#mesaj-kutusu .mesaj-form-grid textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border: 2px solid #008f8f !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+}
+
+/* Mesaj gönder butonu: 6 kutunun altında, ortada */
+#mesaj-kutusu .mesaj-form-grid .mesaj-gonder {
+    grid-column: 1 / -1 !important;
+    width: 55% !important;
+    max-width: 600px !important;
+    justify-self: center !important;
+
+    background: #e58b2a !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    padding: 15px 25px !important;
+}
+
+/* Mesaj ve Not aynı yükseklikte */
+#mesaj-kutusu #yeni-mesaj,
+#mesaj-kutusu #yeni-not {
+    min-height: 125px !important;
+}
+
+/* Telefon / tablet */
+@media (max-width: 700px) {
+
+    body > #mesaj-kutusu {
+        width: 94% !important;
+        padding: 25px 20px 35px !important;
+    }
+
+    #mesaj-kutusu .mesaj-form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #mesaj-kutusu .mesaj-form-grid .mesaj-gonder {
+        grid-column: auto !important;
+        width: 80% !important;
+    }
+}
