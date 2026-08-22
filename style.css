@@ -3552,3 +3552,28 @@ audio {
     text-decoration: none;
     font-weight: 700;
 }
+
+/* MESAJ KUTUSU BAŞLIK */
+
+.mesaj-baslik {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mesaj-logo {
+    font-size: 34px;
+    color: #ffd43b;
+    line-height: 1;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+.mesaj-baslik h2 {
+    margin: 0;
+}
+
+.mesaj-alt-baslik {
+    text-align: center;
+    margin-top: 8px;
+}
