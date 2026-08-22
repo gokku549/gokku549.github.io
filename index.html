@@ -1544,16 +1544,24 @@ import {
 
   let user = auth.currentUser;
 
-  alert("Firebase kullanıcı: " + (user ? user.email : "YOK"));
+if (!user) {
+  user = await new Promise((resolve) => {
 
-  if (!user) {
-    user = await new Promise((resolve) => {
-      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (currentUser) => {
         unsubscribe();
         resolve(currentUser);
-      });
-    });
-  }
+      }
+    );
+
+  });
+}
+
+console.log(
+  "Firebase kullanıcı:",
+  user ? user.email : "YOK"
+);
 
   if (!user) {
     alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
