@@ -3490,7 +3490,7 @@ audio {
 }
 
 .mesaj-kategorileri .ogrenci {
-    color: #ffffff; /* Beyaz */
+    color: #ff8c00 !important; /* Turuncu */
 }
 
 .mesaj-kategorileri .okul {
