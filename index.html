@@ -1452,8 +1452,653 @@
         </div>
 
     </section>
-            
 
+  <!-- =====================================================
+     PROFESYONEL MESAJ KUTUSU
+===================================================== -->
+
+<section id="mesaj-kutusu" class="mesaj-kutusu">
+
+  <div class="mesaj-kutu-baslik">
+    <span class="mesaj-kutu-ikon">💬</span>
+    <div>
+      <h2>Size Nasıl Yardımcı Olabilirim?</h2>
+      <p>Veli, öğrenci, okul ve kurumlar için iletişim alanı</p>
+    </div>
+  </div>
+
+  <!-- KATEGORİLER -->
+  <div class="mesaj-kategoriler">
+
+    <button type="button" class="mesaj-kategori secili"
+            onclick="mesajKategoriSec(this,'Veli')">
+      👨‍👩‍👧 Veli
+    </button>
+
+    <button type="button" class="mesaj-kategori"
+            onclick="mesajKategoriSec(this,'Öğrenci')">
+      🎓 Öğrenci
+    </button>
+
+    <button type="button" class="mesaj-kategori"
+            onclick="mesajKategoriSec(this,'Okul')">
+      🏫 Okul
+    </button>
+
+    <button type="button" class="mesaj-kategori"
+            onclick="mesajKategoriSec(this,'Öğretmen')">
+      👩‍🏫 Öğretmen
+    </button>
+
+    <button type="button" class="mesaj-kategori"
+            onclick="mesajKategoriSec(this,'Kurum')">
+      🏢 Kurum
+    </button>
+
+    <button type="button" class="mesaj-kategori"
+            onclick="mesajKategoriSec(this,'Diğer')">
+      💬 Diğer
+    </button>
+
+  </div>
+
+
+  <!-- MESAJ FORMU -->
+
+  <form class="mesaj-form" onsubmit="return yeniMesajGonder(event)">
+
+    <div class="mesaj-form-grid">
+
+      <div class="mesaj-alan">
+        <label>👤 Ad Soyad</label>
+        <input
+          type="text"
+          id="yeni-adsoyad"
+          placeholder="Adınız ve soyadınız"
+          required>
+      </div>
+
+      <div class="mesaj-alan">
+        <label>📧 E-posta</label>
+        <input
+          type="email"
+          id="yeni-email"
+          placeholder="ornek@email.com"
+          required>
+      </div>
+
+      <div class="mesaj-alan">
+        <label>📱 Telefon</label>
+        <input
+          type="tel"
+          id="yeni-telefon"
+          placeholder="Telefon numaranız">
+      </div>
+
+      <div class="mesaj-alan">
+        <label>📌 İletişim Türü</label>
+        <select id="yeni-iletisim" required>
+          <option value="Veli">Veli</option>
+          <option value="Öğrenci">Öğrenci</option>
+          <option value="Okul">Okul</option>
+          <option value="Öğretmen">Öğretmen</option>
+          <option value="Kurum">Kurum</option>
+          <option value="Diğer">Diğer</option>
+        </select>
+      </div>
+
+    </div>
+
+
+    <div class="mesaj-alan">
+      <label>📚 Konu / Talep</label>
+      <input
+        type="text"
+        id="yeni-talep"
+        placeholder="Mesajınızın konusu"
+        required>
+    </div>
+
+
+    <div class="mesaj-alan">
+      <label>💬 Mesajınız</label>
+      <textarea
+        id="yeni-mesaj"
+        rows="6"
+        placeholder="Mesajınızı buraya yazabilirsiniz..."
+        required></textarea>
+    </div>
+
+
+    <div class="mesaj-alan">
+      <label>📝 Not</label>
+      <textarea
+        id="yeni-not"
+        rows="3"
+        placeholder="Eklemek istediğiniz not..."></textarea>
+    </div>
+
+
+    <button
+      type="submit"
+      class="mesaj-gonder"
+      id="test-mesaj-butonu">
+      📨 MESAJ GÖNDER
+    </button>
+
+  </form>
+
+
+  <!-- GELEN MESAJLAR -->
+
+  <div class="mesajlar-panel">
+
+    <div class="mesajlar-baslik">
+      <span>📥</span>
+      <div>
+        <h3>Gelen Mesajlar</h3>
+        <p>Size gönderilen mesajlar</p>
+      </div>
+    </div>
+
+    <div id="messages-list">
+      <p class="mesaj-bilgi">
+        🔐 Mesajlarınızı görmek için giriş yapınız.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- GÖNDERİLEN MESAJLAR -->
+
+  <div class="mesajlar-panel">
+
+    <div class="mesajlar-baslik">
+      <span>📤</span>
+      <div>
+        <h3>Gönderilen Mesajlar</h3>
+        <p>Gönderdiğiniz mesajlar</p>
+      </div>
+    </div>
+
+    <div id="sent-messages-list">
+      <p class="mesaj-bilgi">
+        🔐 Gönderilen mesajları görmek için giriş yapınız.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+#mesaj-kutusu {
+  max-width: 950px;
+  margin: 70px auto;
+  padding: 35px;
+  background: linear-gradient(145deg,#ffffff,#f5fff8);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.12);
+  border: 1px solid #dcefe3;
+}
+
+.mesaj-kutu-baslik {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.mesaj-kutu-ikon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#18a558,#0b7d3e);
+  color: white;
+  border-radius: 18px;
+  font-size: 30px;
+  box-shadow: 0 8px 20px rgba(24,165,88,.25);
+}
+
+.mesaj-kutu-baslik h2 {
+  margin: 0;
+  color: #146c43;
+  font-size: 28px;
+}
+
+.mesaj-kutu-baslik p {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+.mesaj-kategoriler {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.mesaj-kategori {
+  border: 2px solid #d8eadf;
+  background: white;
+  color: #176b43;
+  padding: 14px 10px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.mesaj-kategori:hover,
+.mesaj-kategori.secili {
+  color: white;
+  background: linear-gradient(135deg,#18a558,#0b7d3e);
+  border-color: #18a558;
+  transform: translateY(-2px);
+}
+
+.mesaj-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mesaj-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.mesaj-alan {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mesaj-alan label {
+  font-weight: 700;
+  color: #24543a;
+}
+
+.mesaj-alan input,
+.mesaj-alan select,
+.mesaj-alan textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  border: 1px solid #cfe3d6;
+  border-radius: 13px;
+  background: #fff;
+  font: inherit;
+  outline: none;
+  transition: .2s;
+}
+
+.mesaj-alan input:focus,
+.mesaj-alan select:focus,
+.mesaj-alan textarea:focus {
+  border-color: #18a558;
+  box-shadow: 0 0 0 4px rgba(24,165,88,.10);
+}
+
+.mesaj-gonder {
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  padding: 17px;
+  background: linear-gradient(135deg,#18a558,#08783c);
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(24,165,88,.25);
+  transition: .2s;
+}
+
+.mesaj-gonder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(24,165,88,.30);
+}
+
+.mesajlar-panel {
+  margin-top: 35px;
+  padding: 24px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #dcefe3;
+}
+
+.mesajlar-baslik {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.mesajlar-baslik span {
+  font-size: 28px;
+}
+
+.mesajlar-baslik h3 {
+  margin: 0;
+  color: #176b43;
+}
+
+.mesajlar-baslik p {
+  margin: 4px 0 0;
+  color: #777;
+}
+
+.mesaj-bilgi {
+  padding: 18px;
+  background: #f5faf7;
+  border-radius: 12px;
+  color: #66736b;
+}
+
+.message-item {
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #f7fbf8;
+  border-left: 4px solid #18a558;
+}
+
+@media(max-width:700px) {
+
+  #mesaj-kutusu {
+    margin: 35px 12px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .mesaj-kategoriler {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mesaj-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mesaj-kutu-baslik h2 {
+    font-size: 22px;
+  }
+
+}
+
+</style>
+
+
+<script type="module">
+
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+import {
+  getAuth,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  where,
+  orderBy,
+  onSnapshot,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAtXffJpB6koTb08Yk-k2yEjgQt347MLy0",
+  authDomain: "ogretmen-mesaj-kutusu.firebaseapp.com",
+  projectId: "ogretmen-mesaj-kutusu",
+  storageBucket: "ogretmen-mesaj-kutusu.firebasestorage.app",
+  messagingSenderId: "444399275224",
+  appId: "1:444399275224:web:9cf8d89800f7d833efdbad"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+
+window.yeniMesajGonder = async function(event) {
+
+  if (event) event.preventDefault();
+
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
+    return false;
+  }
+
+  const adSoyad =
+    document.getElementById("yeni-adsoyad").value.trim();
+
+  const email =
+    document.getElementById("yeni-email").value.trim();
+
+  const telefon =
+    document.getElementById("yeni-telefon").value.trim();
+
+  const iletisim =
+    document.getElementById("yeni-iletisim").value;
+
+  const talep =
+    document.getElementById("yeni-talep").value.trim();
+
+  const mesaj =
+    document.getElementById("yeni-mesaj").value.trim();
+
+  const not =
+    document.getElementById("yeni-not").value.trim();
+
+  if (!adSoyad || !email || !iletisim || !talep || !mesaj) {
+    alert("⚠️ Lütfen gerekli alanları doldurun.");
+    return false;
+  }
+
+  try {
+
+    await addDoc(collection(db,"messages"), {
+
+      senderId: user.uid,
+      senderEmail: user.email,
+      senderName: adSoyad,
+      senderPhone: telefon,
+
+      receiverEmail: "esragkacademy@gmail.com",
+      receiverName: "Yönetici",
+
+      category: iletisim,
+      subject: talep,
+      text: mesaj,
+      note: not,
+
+      read: false,
+      createdAt: serverTimestamp()
+
+    });
+
+    alert("✅ Mesajınız başarıyla gönderildi!");
+
+    document.querySelector(".mesaj-form").reset();
+
+  } catch(error) {
+
+    console.error("Mesaj gönderme hatası:",error);
+
+    alert("❌ Mesaj gönderilemedi.\n\n" + error.message);
+
+  }
+
+  return false;
+};
+
+
+window.mesajKategoriSec = function(buton,kategori) {
+
+  document
+    .querySelectorAll("#mesaj-kutusu .mesaj-kategori")
+    .forEach(function(btn) {
+      btn.classList.remove("secili");
+    });
+
+  buton.classList.add("secili");
+
+  const select =
+    document.getElementById("yeni-iletisim");
+
+  if (select) {
+    select.value = kategori;
+  }
+
+};
+
+
+const messagesList =
+  document.getElementById("messages-list");
+
+const sentMessagesList =
+  document.getElementById("sent-messages-list");
+
+
+onAuthStateChanged(auth,(user)=> {
+
+  if (!messagesList) return;
+
+  if (!user) {
+
+    messagesList.innerHTML =
+      '<p class="mesaj-bilgi">🔐 Mesajlarınızı görmek için giriş yapınız.</p>';
+
+    if (sentMessagesList) {
+      sentMessagesList.innerHTML =
+        '<p class="mesaj-bilgi">🔐 Gönderilen mesajları görmek için giriş yapınız.</p>';
+    }
+
+    return;
+  }
+
+
+  /* GELEN MESAJLAR */
+
+  const gelenQuery = query(
+    collection(db,"messages"),
+    where("receiverEmail","==",user.email),
+    orderBy("createdAt","asc")
+  );
+
+  onSnapshot(gelenQuery,(snapshot)=> {
+
+    messagesList.innerHTML = "";
+
+    if (snapshot.empty) {
+
+      messagesList.innerHTML =
+        '<p class="mesaj-bilgi">📭 Henüz gelen mesaj yok.</p>';
+
+      return;
+    }
+
+    snapshot.forEach((doc)=> {
+
+      const message = doc.data();
+
+      const box =
+        document.createElement("div");
+
+      box.className = "message-item";
+
+      box.innerHTML = `
+        <strong>👤 ${message.senderName || message.senderEmail || "Gönderen"}</strong>
+        <p>📌 ${message.subject || ""}</p>
+        <p>${message.text || ""}</p>
+        <small>${message.senderEmail || ""}</small>
+      `;
+
+      messagesList.appendChild(box);
+
+    });
+
+  },(error)=> {
+
+    console.error(error);
+
+    messagesList.innerHTML =
+      '<p class="mesaj-bilgi">❌ Gelen mesajlar yüklenemedi.</p>';
+
+  });
+
+
+  /* GÖNDERİLEN MESAJLAR */
+
+  const gonderilenQuery = query(
+    collection(db,"messages"),
+    where("senderId","==",user.uid),
+    orderBy("createdAt","asc")
+  );
+
+  onSnapshot(gonderilenQuery,(snapshot)=> {
+
+    if (!sentMessagesList) return;
+
+    sentMessagesList.innerHTML = "";
+
+    if (snapshot.empty) {
+
+      sentMessagesList.innerHTML =
+        '<p class="mesaj-bilgi">📭 Henüz gönderilmiş mesaj yok.</p>';
+
+      return;
+    }
+
+    snapshot.forEach((doc)=> {
+
+      const message = doc.data();
+
+      const box =
+        document.createElement("div");
+
+      box.className = "message-item";
+
+      box.innerHTML = `
+        <strong>📤 ${message.subject || "Mesaj"}</strong>
+        <p>${message.text || ""}</p>
+        <small>Alıcı: ${message.receiverEmail || "Yönetici"}</small>
+      `;
+
+      sentMessagesList.appendChild(box);
+
+    });
+
+  },(error)=> {
+
+    console.error(error);
+
+    if (sentMessagesList) {
+      sentMessagesList.innerHTML =
+        '<p class="mesaj-bilgi">❌ Gönderilen mesajlar yüklenemedi.</p>';
+    }
+
+  });
+
+});
+
+</script>
+   
+  
     <!-- =========================
          FOOTER
     ========================== -->
