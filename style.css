@@ -3709,3 +3709,94 @@ audio {
     resize: vertical !important;
     border-radius: 10px !important;
 }
+
+/* =========================================
+   MESAJ KUTUSU - FORM ALANLARI
+========================================= */
+
+.mesaj-kutu input,
+.mesaj-kutu textarea,
+.mesaj-kutusu input,
+.mesaj-kutusu textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+
+    padding: 12px 15px !important;
+
+    box-sizing: border-box !important;
+
+    border: 2px solid #40cfcf !important;
+    border-radius: 10px !important;
+
+    background: #ffffff !important;
+
+    color: #222222 !important;
+
+    font-size: 16px !important;
+
+    outline: none !important;
+}
+
+/* Mesaj ve Not alanları biraz daha yüksek */
+.mesaj-kutu textarea,
+.mesaj-kutusu textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+}
+
+/* Tıklanınca çerçeve */
+.mesaj-kutu input:focus,
+.mesaj-kutu textarea:focus,
+.mesaj-kutusu input:focus,
+.mesaj-kutusu textarea:focus {
+    border-color: #40cfcf !important;
+    box-shadow: 0 0 0 3px rgba(64, 207, 207, 0.15) !important;
+}
+
+/* Alanların sayfadan taşmasını önle */
+.mesaj-kutu .mesaj-alan,
+.mesaj-kutusu .mesaj-alan {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 18px !important;
+}
+
+/* Mobilde de taşmasın */
+@media (max-width: 600px) {
+
+    .mesaj-kutu,
+    .mesaj-kutusu {
+        width: 96% !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .mesaj-kutu input,
+    .mesaj-kutu textarea,
+    .mesaj-kutusu input,
+    .mesaj-kutusu textarea {
+        width: 100% !important;
+        font-size: 15px !important;
+    }
+}
+
+/* MESAJ KUTUSU - TÜM KUTUCUK ÇERÇEVELERİ */
+
+.mesaj-kutu input,
+.mesaj-kutu textarea,
+.mesaj-kutusu input,
+.mesaj-kutusu textarea {
+    border: 2px solid #7FDBDB !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+}
+
+.mesaj-kutu input:focus,
+.mesaj-kutu textarea:focus,
+.mesaj-kutusu input:focus,
+.mesaj-kutusu textarea:focus {
+    border-color: #7FDBDB !important;
+    box-shadow: 0 0 0 3px rgba(127, 219, 219, 0.20) !important;
+}
