@@ -3696,3 +3696,16 @@ audio {
     margin-right: auto !important;
     box-sizing: border-box !important;
 }
+
+/* SADECE NOT KUTUSU */
+
+.mesaj-alan textarea#yeni-not,
+.mesaj-alan textarea[name="not"],
+#yeni-not {
+    width: 100% !important;
+    min-height: 120px !important;
+    padding: 14px 16px !important;
+    box-sizing: border-box !important;
+    resize: vertical !important;
+    border-radius: 10px !important;
+}
