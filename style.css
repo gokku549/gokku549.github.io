@@ -3596,3 +3596,22 @@ audio {
     font-size: 28px !important;
     font-weight: 800 !important;
 }
+
+.mesaj-logo {
+    color: #d4a017 !important;
+    font-size: 34px !important;
+    background: transparent !important;
+    -webkit-text-fill-color: #d4a017 !important;
+}
+
+.mesaj-sosyal-butonlar .email {
+    color: #7b2cbf !important;
+}
+
+.mesaj-sosyal-butonlar .instagram {
+    color: #c94c4c !important;
+}
+
+.mesaj-sosyal-butonlar .linkedin {
+    color: #8fd3e8 !important;
+}
