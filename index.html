@@ -1558,6 +1558,11 @@ if (!user) {
   const email =
     document.getElementById("yeni-email").value.trim();
 
+  if (email !== user.email) {
+  alert("⚠️ Giriş yaptığınız e-posta ile mesaj formundaki e-posta aynı olmalıdır.");
+  return false;
+  }
+   
   const telefon =
     document.getElementById("yeni-telefon").value.trim();
 
@@ -2137,10 +2142,9 @@ if (!user) {
     olarak yalnızca yetkili kişi tarafından görüntülenmelidir.
   </div>
 
-  <button type="button" class="mesaj-gonder"
-          onclick="yeniMesajGonder(event)">
-    📨 MESAJ GÖNDER
-  </button>
+    <button type="submit" class="mesaj-gonder">
+  📨 MESAJ GÖNDER
+</button>  
   
  <!-- ==================== GELEN MESAJLAR ==================== -->
 
