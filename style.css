@@ -3957,3 +3957,105 @@ body > #mesaj-kutusu {
         width: 80% !important;
     }
 }
+
+/* =========================================
+   PROFESYONEL MESAJ KATEGORİLERİ
+========================================= */
+
+#mesaj-kutusu .mesaj-kategorileri {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+
+    margin: 18px auto 25px !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+}
+
+/* Her kategori */
+#mesaj-kutusu .mesaj-kategorileri .kategori {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+
+/* Renkli logo */
+#mesaj-kutusu .kategori-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    border-radius: 50% !important;
+    font-size: 17px !important;
+
+    background: #f5f5f5 !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12) !important;
+}
+
+/* Veli - TURKUAZ */
+#mesaj-kutusu .veli {
+    color: #008f8f !important;
+}
+
+#mesaj-kutusu .veli .kategori-logo {
+    background: #20c7c7 !important;
+}
+
+/* Öğrenci - TURUNCU */
+#mesaj-kutusu .ogrenci {
+    color: #e87519 !important;
+}
+
+#mesaj-kutusu .ogrenci .kategori-logo {
+    background: #f39a32 !important;
+}
+
+/* Okul - YEŞİL */
+#mesaj-kutusu .okul {
+    color: #168447 !important;
+}
+
+#mesaj-kutusu .okul .kategori-logo {
+    background: #43b96b !important;
+}
+
+/* Öğretmen - MOR */
+#mesaj-kutusu .ogretmen {
+    color: #7b3fa1 !important;
+}
+
+#mesaj-kutusu .ogretmen .kategori-logo {
+    background: #a66bc5 !important;
+}
+
+/* Kurum - AÇIK KAHVE */
+#mesaj-kutusu .kurum {
+    color: #9a6b43 !important;
+}
+
+#mesaj-kutusu .kurum .kategori-logo {
+    background: #d6b08a !important;
+}
+
+/* Diğer - MAVİ */
+#mesaj-kutusu .diger {
+    color: #2878b8 !important;
+}
+
+#mesaj-kutusu .diger .kategori-logo {
+    background: #72b9e8 !important;
+}
+
+/* Noktalar */
+#mesaj-kutusu .mesaj-kategorileri .ayrac {
+    color: #999 !important;
+    font-weight: 600 !important;
+}
