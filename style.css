@@ -3494,7 +3494,7 @@ audio {
 }
 
 .mesaj-kategorileri .okul {
-    color: #ff6f61; /* Mercan */
+    color: #2ecc71 !important; /* Yeşil */
 }
 
 .mesaj-kategorileri .ogretmen {
