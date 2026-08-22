@@ -3577,3 +3577,22 @@ audio {
     text-align: center;
     margin-top: 8px;
 }
+
+.mesaj-baslik h2 {
+    color: #111111 !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    margin: 0;
+}
+
+.mesaj-logo {
+    font-size: 34px !important;
+    color: #d4a017 !important; /* Koyu sarı */
+    background: transparent !important;
+}
+
+.mesaj-baslik h2 {
+    color: #111111 !important; /* Siyah */
+    font-size: 28px !important;
+    font-weight: 800 !important;
+}
