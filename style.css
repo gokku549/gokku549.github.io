@@ -3616,3 +3616,63 @@ audio {
    color: #d4a017 !important; /* Koyu sarı */
 }
 
+/* =========================
+   SADECE MESAJ KUTUSU
+========================= */
+
+.mesaj-kutu,
+.mesaj-kutusu {
+    background: #fff !important;
+    width: min(94%, 1000px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 30px 32px 40px !important;
+    box-sizing: border-box !important;
+    border-radius: 24px !important;
+}
+
+/* E-posta / Instagram / LinkedIn */
+.mesaj-sosyal-butonlar {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+    margin: 28px auto 0 !important;
+    padding: 10px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.mesaj-sosyal-butonlar .sosyal-buton {
+    padding: 9px 16px !important;
+    border-radius: 9px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+/* Renkler */
+.mesaj-sosyal-butonlar .email {
+    color: #7b2cbf !important;
+}
+
+.mesaj-sosyal-butonlar .instagram {
+    color: #c94c4c !important;
+}
+
+.mesaj-sosyal-butonlar .linkedin {
+    color: #d4a017 !important;
+}
+
+/* Telefonda taşmasın */
+@media (max-width: 600px) {
+    .mesaj-kutu,
+    .mesaj-kutusu {
+        width: 96% !important;
+        padding: 25px 18px 35px !important;
+    }
+
+    .mesaj-sosyal-butonlar {
+        gap: 10px !important;
+    }
+}
