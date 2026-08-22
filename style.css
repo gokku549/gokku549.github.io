@@ -3476,3 +3476,59 @@ audio {
   background: #1d4ed8;
 }
 
+/* MESAJ KUTUSU KATEGORİ RENKLERİ */
+
+.mesaj-kategorileri {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 12px 0 20px;
+}
+
+.mesaj-kategorileri .veli {
+    color: #20c9c3; /* Turkuaz */
+}
+
+.mesaj-kategorileri .ogrenci {
+    color: #ffffff; /* Beyaz */
+}
+
+.mesaj-kategorileri .okul {
+    color: #ff6f61; /* Mercan */
+}
+
+.mesaj-kategorileri .ogretmen {
+    color: #9b59b6; /* Mor */
+}
+
+.mesaj-kategorileri .kurum {
+    color: #c8a27a; /* Açık kahve */
+}
+
+.mesaj-kategorileri .diger {
+    color: #f4c542; /* Altın sarısı */
+}
+
+.mesaj-kategorileri .ayrac {
+    color: #b8b8b8;
+    margin: 0 5px;
+}
+
+/* MESAJ GÖNDER BUTONU */
+
+.mesaj-gonder {
+    background: #ffffff !important;
+    color: #2196f3 !important;
+    border: 2px solid #2196f3 !important;
+    border-radius: 8px !important;
+    padding: 12px 28px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.mesaj-gonder:hover {
+    background: #f4f9ff !important;
+    color: #1976d2 !important;
+}
