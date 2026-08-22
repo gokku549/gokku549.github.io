@@ -1,6 +1,6 @@
 <!DOCTYPE html>        
 <html lang="tr">           
-
+                   
 <head>       
     <meta charset="UTF-8">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1536,30 +1536,29 @@ import {
 
   const db = getFirestore(app);
 
-   window.yeniMesajGonder = async function(event) {
+ window.yeniMesajGonder = async function(event) {
 
   if (event) {
     event.preventDefault();
   }
 
-let user = auth.currentUser;
+  let user = auth.currentUser;
 
-alert("Firebase kullanıcı: " + (user ? user.email : "YOK"));
+  alert("Firebase kullanıcı: " + (user ? user.email : "YOK"));
 
-if (!user) {
-  user = await new Promise((resolve) => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      unsubscribe();
-      resolve(currentUser);
+  if (!user) {
+    user = await new Promise((resolve) => {
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        unsubscribe();
+        resolve(currentUser);
+      });
     });
-  });
-}
+  }
 
-
-if (!user) {
-  alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
-  return false;
-} 
+  if (!user) {
+    alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
+    return false;
+  }
 
   const adSoyad =
     document.getElementById("yeni-adsoyad").value.trim();
@@ -1594,7 +1593,6 @@ if (!user) {
       senderId: user.uid,
       senderEmail: user.email,
       senderName: adSoyad,
-
       senderPhone: telefon,
 
       receiverEmail: "esragkacademy@gmail.com",
@@ -1606,7 +1604,6 @@ if (!user) {
       note: not,
 
       read: false,
-
       createdAt: serverTimestamp()
 
     });
@@ -1619,13 +1616,12 @@ if (!user) {
 
     console.error("Mesaj gönderme hatası:", error);
 
-    alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz.");
-
+    alert("❌ Mesaj gönderilemedi.\n\n" + error.message);
   }
 
   return false;
-}; 
-    
+};
+  
     const messagesList = document.getElementById("messages-list");
 
     onAuthStateChanged(auth, (user) => {
