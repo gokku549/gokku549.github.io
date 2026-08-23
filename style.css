@@ -4147,3 +4147,18 @@ body > #mesaj-kutusu {
     background: #e63946 !important;
     background-color: #e63946 !important;
 }
+
+/* 📨 MESAJ GÖNDER — ORTA BOY */
+#mesaj-kutusu .mesaj-gonder {
+    width: 70% !important;
+    max-width: 500px !important;
+    margin: 25px auto !important;
+
+    padding: 14px 20px !important;
+
+    border-radius: 13px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+
+    display: block !important;
+}
