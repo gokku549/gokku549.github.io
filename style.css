@@ -4131,3 +4131,19 @@ body > #mesaj-kutusu {
     }
 
 }
+
+/* MERCAN BUTONLAR */
+#mesaj-kutusu .mesaj-alan button {
+    background: #ff4f5e !important;
+    background-color: #ff4f5e !important;
+    color: #ffffff !important;
+    border: 2px solid #e63946 !important;
+    border-radius: 13px !important;
+    font-weight: 800 !important;
+    cursor: pointer !important;
+}
+
+#mesaj-kutusu .mesaj-alan button:hover {
+    background: #e63946 !important;
+    background-color: #e63946 !important;
+}
