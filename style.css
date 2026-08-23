@@ -4199,3 +4199,10 @@ body > #mesaj-kutusu {
     margin: 0 !important;
     padding: 18px !important;
 }
+
+.mesaj-giris-uyarilari {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
