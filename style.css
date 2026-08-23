@@ -4206,3 +4206,8 @@ body > #mesaj-kutusu {
     gap: 10px;
     text-align: left;
 }
+
+.mesaj-gonder {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
