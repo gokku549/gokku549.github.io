@@ -4086,3 +4086,48 @@ body > #mesaj-kutusu {
     min-height: 50px;
     box-sizing: border-box;
 }
+
+/* =========================================
+   MESAJ FORMU - YENİ DÜZEN
+   ========================================= */
+
+#mesaj-kutusu .mesaj-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* Tüm alanlar aynı genişlikte */
+#mesaj-kutusu .mesaj-alan {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mercan çerçeve */
+#mesaj-kutusu .mesaj-alan input,
+#mesaj-kutusu .mesaj-alan select,
+#mesaj-kutusu .mesaj-alan textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ff4f5e !important;
+    border-radius: 13px;
+}
+
+/* Mesaj gönder butonu */
+#mesaj-kutusu .mesaj-gonder {
+    width: 100%;
+    box-sizing: border-box;
+    background: #8b5cf6 !important;
+    border: 2px solid #7c3aed !important;
+    border-radius: 15px;
+    color: #000 !important;
+}
+
+/* Telefonda tek sütun */
+@media (max-width: 700px) {
+
+    #mesaj-kutusu .mesaj-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
