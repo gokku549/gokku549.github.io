@@ -1653,9 +1653,27 @@
 
 </section>
 
+  <!-- SOSYAL İLETİŞİM -->
 
+  <div class="mesaj-sosyal-butonlar">
+
+    <a href="mailto:ornek@email.com" class="sosyal-buton email">
+      📧 E-posta
+    </a>
+
+    <a href="#" class="sosyal-buton instagram">
+      📷 Instagram
+    </a>
+
+    <a href="#" class="sosyal-buton linkedin">
+      💼 LinkedIn
+    </a>
+
+  </div> 
+  
 <style>
 
+  
  /* SADECE MESAJ SAYFASI */
 .mesajlar-panel {
   margin-top: -15px;
@@ -2184,24 +2202,27 @@ onAuthStateChanged(auth,(user)=> {
 
 </script>
 
-<!-- Gönderilen Mesajlar -->
 
-<div class="mesaj-sosyal-butonlar">
+ <!-- GÖNDERİLEN MESAJLAR -->
 
-    <a href="mailto:ornek@email.com" class="sosyal-buton email">
-        📧 E-posta
-    </a>
+<div class="mesajlar-panel">
 
-    <a href="#" class="sosyal-buton instagram">
-        📷 Instagram
-    </a>
+  <div class="mesajlar-baslik">
+    <span>📤</span>
+    <div>
+      <h3>Gönderilen Mesajlar</h3>
+      <p>Gönderdiğiniz mesajlar</p>
+    </div>
+  </div>
 
-    <a href="#" class="sosyal-buton linkedin">
-        💼 LinkedIn
-    </a>
+  <div id="sent-messages-list">
+    <p class="mesaj-bilgi">
+      🔐 Gönderilen mesajları görmek için giriş yapınız.
+    </p>
+  </div>
 
 </div>
-
+  
 </div> <!-- BEYAZ MESAJ SAYFASI -->
 
 <!-- =========================
