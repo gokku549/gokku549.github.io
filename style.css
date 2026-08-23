@@ -4073,3 +4073,16 @@ body > #mesaj-kutusu {
     box-sizing: border-box;
     flex-wrap: wrap;
 }
+
+/* TELEFON + İLETİŞİM TÜRÜ YAN YANA */
+#mesaj-kutusu .mesaj-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+#mesaj-kutusu #yeni-iletisim {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+}
