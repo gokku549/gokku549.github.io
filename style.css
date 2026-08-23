@@ -4211,3 +4211,7 @@ body > #mesaj-kutusu {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+.mesaj-gonder {
+    margin-bottom: 10px;
+}
