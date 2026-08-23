@@ -4223,3 +4223,8 @@ body > #mesaj-kutusu {
 #mesaj-kutusu .gelen-mesajlar {
   margin-top: 25px !important;
 }
+
+#mesaj-kutusu .mesaj-gonder {
+  margin-top: 35px !important;
+  margin-bottom: 25px !important;
+}
