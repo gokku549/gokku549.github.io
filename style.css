@@ -4192,3 +4192,10 @@ body > #mesaj-kutusu {
 #mesaj-kutusu .mesajlar-baslik h3 {
     margin: 0 !important;
 }
+
+#mesaj-kutusu .mesaj-bilgi {
+    display: block !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 18px !important;
+}
