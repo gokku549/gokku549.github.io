@@ -4219,3 +4219,7 @@ body > #mesaj-kutusu {
 #mesaj-kutusu .mesaj-gonder {
   margin-bottom: 25px !important;
 }
+
+#mesaj-kutusu .gelen-mesajlar {
+  margin-top: 25px !important;
+}
