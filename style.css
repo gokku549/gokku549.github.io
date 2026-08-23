@@ -3881,8 +3881,8 @@ audio {
 
 /* Ana beyaz sayfa diğer sayfalarla aynı genişlikte */
 body > #mesaj-kutusu {
-    width: min(1200px, 97%) !important;
-    max-width: 1200px !important;
+    width: min(1230px, 98%) !important;
+    max-width: 1230px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     padding: 35px 42px 45px !important;
