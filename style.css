@@ -4059,12 +4059,13 @@ body > #mesaj-kutusu {
     color: #999 !important;
     font-weight: 600 !important;
 }
-/* 📨 MESAJ GÖNDER — AÇIK LİLA */
+
+/* 📨 MESAJ GÖNDER — MOR */
 
 #mesaj-kutusu .mesaj-gonder {
-    background: #d8b4fe !important;
+    background: #8b5cf6 !important;
     color: #000000 !important;
-    border: 2px solid #b98de8 !important;
+    border: 2px solid #7c3aed !important;
 
     font-weight: 800 !important;
     font-size: 17px !important;
@@ -4072,5 +4073,6 @@ body > #mesaj-kutusu {
     border-radius: 12px !important;
     padding: 14px 30px !important;
 
-    box-shadow: 0 4px 10px rgba(130, 90, 170, 0.18) !important;
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25) !important;
 }
+
