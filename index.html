@@ -1,6 +1,6 @@
 <!DOCTYPE html>         
 <html lang="tr">           
-                     
+                          
 <head>       
     <meta charset="UTF-8">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1556,10 +1556,20 @@
     <span class="ayrac">·</span>
     <span class="diger">Diğer</span>
 
-     
-    </div>
-
     <div class="mesaj-alan">
+  <label>📌 İletişim Türü</label>
+  <select id="yeni-iletisim" required>
+    <option value="">Seçiniz</option>
+    <option value="Veli">Veli</option>
+    <option value="Öğrenci">Öğrenci</option>
+    <option value="Okul">Okul</option>
+    <option value="Öğretmen">Öğretmen</option>
+    <option value="Kurum">Kurum</option>
+    <option value="Diğer">Diğer</option>
+  </select>
+</div>
+     
+   <div class="mesaj-alan">
       <label>📚 Konu / Talep</label>
       <input
         type="text"
