@@ -4060,11 +4060,16 @@ body > #mesaj-kutusu {
     font-weight: 600 !important;
 }
 
-/* 📨 MESAJ GÖNDER — MOR */
+/* 📨 MESAJ GÖNDER — KESİN MOR */
 
-#mesaj-kutusu .mesaj-gonder {
-    background: #8b5cf6 !important;
+#mesaj-kutusu button.mesaj-gonder,
+#mesaj-kutusu .mesaj-gonder,
+#mesaj-kutusu input.mesaj-gonder {
+    background-color: #8b5cf6 !important;
+    background-image: none !important;
+
     color: #000000 !important;
+
     border: 2px solid #7c3aed !important;
 
     font-weight: 800 !important;
@@ -4074,5 +4079,10 @@ body > #mesaj-kutusu {
     padding: 14px 30px !important;
 
     box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25) !important;
+
+    appearance: none !important;
+    -webkit-appearance: none !important;
 }
+
+
 
