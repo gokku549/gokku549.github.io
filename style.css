@@ -4060,3 +4060,16 @@ body > #mesaj-kutusu {
     font-weight: 600 !important;
 }
 
+/* 📱 MESAJ KUTUSU — SOSYAL BUTONLAR */
+
+#mesaj-kutusu + .mesaj-sosyal-butonlar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 25px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
