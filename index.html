@@ -1,6 +1,6 @@
 <!DOCTYPE html>         
 <html lang="tr">           
-                   
+                     
 <head>       
     <meta charset="UTF-8">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1756,24 +1756,38 @@
   box-shadow: 0 0 0 4px rgba(24,165,88,.10);
 }
 
-.mesaj-gonder {
-  width: 100%;
-  border: 0;
-  border-radius: 15px;
-  padding: 17px;
-  background: linear-gradient(135deg,#18a558,#08783c);
-  color: white;
-  font-size: 17px;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 0 10px 22px rgba(24,165,88,.25);
-  transition: .2s;
+/* 📨 MESAJ GÖNDER — MOR */
+
+#mesaj-kutusu .mesaj-gonder {
+  width: 100% !important;
+  border: 2px solid #7c3aed !important;
+  border-radius: 15px !important;
+  padding: 17px !important;
+
+  background: #8b5cf6 !important;
+  background-image: none !important;
+
+  color: #000000 !important;
+
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+
+  box-shadow: 0 10px 22px rgba(124, 58, 237, .25) !important;
+  transition: .2s !important;
 }
 
-.mesaj-gonder:hover {
+#mesaj-kutusu .mesaj-gonder:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(24,165,88,.30);
+
+  background: #7c3aed !important;
+  background-image: none !important;
+
+  color: #000000 !important;
+
+  box-shadow: 0 14px 28px rgba(124, 58, 237, .35) !important;
 }
+ 
 
 .mesajlar-panel {
   margin-top: 35px;
