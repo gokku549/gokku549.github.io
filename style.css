@@ -4173,3 +4173,22 @@ body > #mesaj-kutusu {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
 }
+
+/* GELEN / GÖNDERİLEN MESAJLAR BAŞLIK HİZASI */
+
+#mesaj-kutusu .mesajlar-baslik {
+    display: flex !important;
+    align-items: center !important;
+    gap: 13px !important;
+}
+
+#mesaj-kutusu .mesajlar-baslik span {
+    width: 32px !important;
+    min-width: 32px !important;
+    text-align: center !important;
+    font-size: 28px !important;
+}
+
+#mesaj-kutusu .mesajlar-baslik h3 {
+    margin: 0 !important;
+}
