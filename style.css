@@ -4326,3 +4326,11 @@ button[type="submit"] {
     margin-right: 6px !important;
     box-sizing: border-box !important;
 }
+/* 🟣 MOR MESAJ GÖNDER — DAHA DAR VE ORTALI */
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: 96% !important;
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    box-sizing: border-box !important;
+}
+
