@@ -4439,4 +4439,8 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* 💛 MESAJ AÇIKLAMALARI — CANLI PARLAK SARI */
+.mesajlar-baslik p {
+    color: #FFF176 !important;
+}
 
