@@ -4427,3 +4427,14 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 GERÇEK MOR MESAJ BUTONU — BİRAZ GENİŞ */
+#mesaj-kutusu .mesaj-gonder {
+    width: 360px !important;
+    max-width: calc(100% - 30px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
