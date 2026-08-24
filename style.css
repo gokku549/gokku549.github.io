@@ -4319,3 +4319,10 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* 🟣 MOR BUTON — SAĞDAN SOLDAN BİRAZ KÜÇÜK */
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: calc(100% - 12px) !important;
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+    box-sizing: border-box !important;
+}
