@@ -4266,3 +4266,9 @@ button[type="submit"] {
     box-shadow: 0 6px 18px rgba(255, 95, 109, 0.30) !important;
 }
 
+/* 🟣 MESAJ GÖNDER BUTONU - SADECE SAĞDAN/SOLDAN BİRAZ GENİŞ */
+#mesaj-kutusu .mesaj-gonder {
+    width: calc(100% + 8px) !important;
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+}
