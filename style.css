@@ -4334,3 +4334,11 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* MOR MESAJ GÖNDER BUTONU */
+#mesaj-kutusu .mesaj-gonder {
+    width: 94% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
