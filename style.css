@@ -4361,3 +4361,12 @@ button[type="submit"] {
     margin-right: auto !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 MOR BUTON — ORTA GENİŞLİKTE VE ORTALI */
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
