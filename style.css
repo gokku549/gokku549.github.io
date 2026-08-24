@@ -4382,3 +4382,7 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* 💛 1 — Size gönderilen mesajlar */
+.mesajlar-panel:nth-of-type(1) .mesajlar-baslik p {
+    color: #FFF176 !important;
+}
