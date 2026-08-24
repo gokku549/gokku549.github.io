@@ -4415,3 +4415,15 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 MOR KUTU — BİRAZ DAHA GENİŞ VE ORTALI */
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: 100% !important;
+    max-width: 360px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
