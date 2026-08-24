@@ -4275,4 +4275,15 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* 🟣 MOR MESAJ GÖNDER BUTONU - ORTALI, BİRAZ GENİŞ */
+#mesaj-kutusu .mesaj-gonder {
+    width: calc(100% + 30px) !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+
+    /* Boyu aynı kalsın */
+    padding: 20px 17px !important;
+
+    box-sizing: border-box !important;
+}
 
