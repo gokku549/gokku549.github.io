@@ -4231,3 +4231,8 @@ body > #mesaj-kutusu {
 #mesaj-kutusu .mesaj-gonder {
   margin-bottom: 35px !important;
 }
+
+/* Mor Mesaj Gönder butonu - alt boşluk */
+button[type="submit"] {
+    margin-bottom: 25px !important;
+}
