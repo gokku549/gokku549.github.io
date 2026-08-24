@@ -4444,3 +4444,8 @@ button[type="submit"] {
     color: #FFF176 !important;
 }
 
+/* 💛 MESAJ AÇIKLAMALARI — KOYU, CANLI VE KALIN SARI */
+.mesajlar-baslik p {
+    color: #FFD700 !important;
+    font-weight: 700 !important;
+}
