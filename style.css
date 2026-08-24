@@ -4275,3 +4275,13 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 MESAJ GÖNDER — ORTA GENİŞLİK / ORTALI */
+#mesaj-kutusu button.mesaj-gonder {
+    width: calc(100% + 4px) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
