@@ -4266,22 +4266,13 @@ button[type="submit"] {
     box-shadow: 0 6px 18px rgba(255, 95, 109, 0.30) !important;
 }
 
-/* 🟣 MOR MESAJ GÖNDER — YATAY GENİŞ VE ORTALI */
+/* 🟣 MOR MESAJ GÖNDER — BİRAZ DAHA DAR VE ORTALI */
 #mesaj-kutusu button.mesaj-gonder {
-    width: calc(100% + 16px) !important;
-    max-width: none !important;
+    width: calc(100% - 12px) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
     box-sizing: border-box !important;
 }
 
-/* 🟣 MESAJ GÖNDER — ORTA GENİŞLİK / ORTALI */
-#mesaj-kutusu button.mesaj-gonder {
-    width: calc(100% + 4px) !important;
-    max-width: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-    box-sizing: border-box !important;
-}
+
