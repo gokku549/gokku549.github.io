@@ -4245,3 +4245,12 @@ button[type="submit"] {
 #sent-messages {
     margin-top: 24px !important;
 }
+
+.mesajlar-panel {
+    margin-bottom: 24px !important;
+}
+
+.mesajlar-panel + .mesajlar-panel {
+    margin-top: 0 !important;
+}
+
