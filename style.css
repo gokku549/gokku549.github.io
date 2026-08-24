@@ -4342,3 +4342,9 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+#mesaj-kutusu .mesaj-gonder {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
