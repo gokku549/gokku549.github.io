@@ -4254,3 +4254,10 @@ button[type="submit"] {
     margin-top: 0 !important;
 }
 
+.mesajlar-panel {
+    background: linear-gradient(135deg, #ff7f6e, #ff5f6d) !important;
+    border: 2px solid #ff8a7a !important;
+    box-shadow: 0 6px 18px rgba(255, 95, 109, 0.30) !important;
+}
+
+
