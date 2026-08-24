@@ -4348,3 +4348,10 @@ button[type="submit"] {
     margin-right: auto !important;
     box-sizing: border-box !important;
 }
+
+#mesaj-kutusu .mesaj-gonder {
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
