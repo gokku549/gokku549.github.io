@@ -4465,3 +4465,14 @@ button[type="submit"] {
     font-weight: 800 !important;
     text-shadow: 0 0 2px #C026FF !important;
 }
+
+/* 🟣 GERÇEK MOR MESAJ BUTONU — BİRAZ DAHA GENİŞ */
+#mesaj-kutusu .mesaj-gonder {
+    width: 390px !important;
+    max-width: calc(100% - 30px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
