@@ -4294,5 +4294,14 @@ button[type="submit"] {
     margin-right: -12px !important;
     box-sizing: border-box !important;
 }
+/* 🟣 MOR KUTU — ORTADA VE YATAYDA BİRAZ GENİŞ */
+
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    display: block !important;
+    width: calc(100% + 30px) !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    box-sizing: border-box !important;
+}
 
 
