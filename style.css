@@ -3846,6 +3846,13 @@ audio {
     resize: vertical !important;
 }
 
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: calc(100% - 6px) !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    box-sizing: border-box !important;
+}
+
 /* Tıklanınca da koyu turkuaz */
 .mesaj-kutu input:focus,
 .mesaj-kutu textarea:focus,
