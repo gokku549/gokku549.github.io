@@ -4468,7 +4468,7 @@ button[type="submit"] {
 
 /* 🟣 GERÇEK MOR MESAJ BUTONU — BİRAZ DAHA GENİŞ */
 #mesaj-kutusu .mesaj-gonder {
-    width: 420px !important;
+    width: 450px !important;
     max-width: calc(100% - 30px) !important;
     margin-left: auto !important;
     margin-right: auto !important;
