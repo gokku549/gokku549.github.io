@@ -4370,3 +4370,15 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 MOR MESAJ BUTONU — SABİT ORTA GENİŞLİK */
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
