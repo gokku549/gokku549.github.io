@@ -4490,3 +4490,10 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* 📚 SADECE KONU / TALEP — MESAJINIZ İLE AYNI GENİŞLİK */
+#mesaj-kutusu input#yeni-talep {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
