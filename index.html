@@ -2221,8 +2221,32 @@ onAuthStateChanged(auth,(user)=> {
 
 });
 
-</script>
+// 📚 SADECE KONU / TALEP — MESAJINIZ KUTUSUYLA AYNI GENİŞLİK
+function konuTalepGenisliginiEsitle() {
+  const konu = document.getElementById("yeni-talep");
+  const mesaj = document.getElementById("yeni-mesaj");
 
+  if (konu && mesaj) {
+    const mesajGenisligi = mesaj.getBoundingClientRect().width;
+
+    konu.style.setProperty(
+      "width",
+      mesajGenisligi + "px",
+      "important"
+    );
+
+    konu.style.setProperty(
+      "max-width",
+      mesajGenisligi + "px",
+      "important"
+    );
+  }
+}
+
+window.addEventListener("load", konuTalepGenisliginiEsitle);
+window.addEventListener("resize", konuTalepGenisliginiEsitle);
+
+</script>
 
 
 </div> <!-- BEYAZ MESAJ SAYFASI -->
