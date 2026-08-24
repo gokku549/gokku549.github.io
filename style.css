@@ -4286,4 +4286,13 @@ button[type="submit"] {
 
     box-sizing: border-box !important;
 }
+/* MOR BUTON - SAĞDAN SOLDAN BİRAZ GENİŞ */
+#mesaj-kutusu button#test-mesaj-butonu {
+    width: calc(100% + 24px) !important;
+    max-width: none !important;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+    box-sizing: border-box !important;
+}
+
 
