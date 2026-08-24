@@ -4438,3 +4438,11 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 🟣 MOR BUTON ALANI — BİRAZ GENİŞLET */
+#mesaj-kutusu .mesaj-form {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
