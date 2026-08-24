@@ -2221,30 +2221,25 @@ onAuthStateChanged(auth,(user)=> {
 
 });
 
-// 📚 SADECE KONU / TALEP — MESAJINIZ KUTUSUYLA AYNI GENİŞLİK
-function konuTalepGenisliginiEsitle() {
+// 📚 SADECE KONU / TALEP ALANI — MESAJINIZ ALANI KADAR
+function konuTalepAlaniniEsitle() {
   const konu = document.getElementById("yeni-talep");
   const mesaj = document.getElementById("yeni-mesaj");
 
-  if (konu && mesaj) {
-    const mesajGenisligi = mesaj.getBoundingClientRect().width;
+  if (konu && mesaj && konu.parentElement && mesaj.parentElement) {
+    const mesajAlaniGenisligi =
+      mesaj.parentElement.getBoundingClientRect().width;
 
-    konu.style.setProperty(
-      "width",
-      mesajGenisligi + "px",
-      "important"
-    );
+    konu.parentElement.style.width =
+      mesajAlaniGenisligi + "px";
 
-    konu.style.setProperty(
-      "max-width",
-      mesajGenisligi + "px",
-      "important"
-    );
+    konu.style.width = "100%";
+    konu.style.boxSizing = "border-box";
   }
 }
 
-window.addEventListener("load", konuTalepGenisliginiEsitle);
-window.addEventListener("resize", konuTalepGenisliginiEsitle);
+window.addEventListener("load", konuTalepAlaniniEsitle);
+window.addEventListener("resize", konuTalepAlaniniEsitle);
 
 </script>
 
