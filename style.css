@@ -4449,3 +4449,11 @@ button[type="submit"] {
     color: #FFD700 !important;
     font-weight: 700 !important;
 }
+
+/* 💛 SADECE İKİ MESAJ AÇIKLAMASI */
+.mesajlar-panel:nth-of-type(1) .mesajlar-baslik p,
+.mesajlar-panel:nth-of-type(2) .mesajlar-baslik p {
+    color: #FFD700 !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 1px #FFD700 !important;
+}
