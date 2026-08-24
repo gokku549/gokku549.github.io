@@ -1556,14 +1556,14 @@
     </select>
   </div>
 
-  <div class="mesaj-alan">
-    <label>📚 Konu / Talep</label>
-    <input
-      type="text"
-      id="yeni-talep"
-      placeholder="Mesajınızın konusu"
-      required>
-  </div>
+ <div class="mesaj-alan">
+  <label>📚 Konu / Talep</label>
+  <textarea
+    id="yeni-talep"
+    rows="6"
+    placeholder="Mesajınızın konusu"
+    required></textarea>
+</div>
 
   <div class="mesaj-alan">
     <label>💬 Mesajınız</label>
@@ -2221,26 +2221,9 @@ onAuthStateChanged(auth,(user)=> {
 
 });
 
-// 📚 SADECE KONU / TALEP ALANI — MESAJINIZ ALANI KADAR
-function konuTalepAlaniniEsitle() {
-  const konu = document.getElementById("yeni-talep");
-  const mesaj = document.getElementById("yeni-mesaj");
 
-  if (konu && mesaj && konu.parentElement && mesaj.parentElement) {
-    const mesajAlaniGenisligi =
-      mesaj.parentElement.getBoundingClientRect().width;
 
-    konu.parentElement.style.width =
-      mesajAlaniGenisligi + "px";
-
-    konu.style.width = "100%";
-    konu.style.boxSizing = "border-box";
-  }
-}
-
-window.addEventListener("load", konuTalepAlaniniEsitle);
-window.addEventListener("resize", konuTalepAlaniniEsitle);
-
+  
 </script>
 
 
