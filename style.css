@@ -4482,3 +4482,11 @@ button[type="submit"] {
     width: 100% !important;
     box-sizing: border-box !important;
 }
+
+/* 📚 KONU / TALEP — MESAJINIZ KUTUSUYLA AYNI */
+#mesaj-kutusu #yeni-talep {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
