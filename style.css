@@ -4476,3 +4476,9 @@ button[type="submit"] {
     display: block !important;
     box-sizing: border-box !important;
 }
+
+/* 📚 KONU / TALEP — MESAJINIZ İLE AYNI GENİŞLİK */
+#mesaj-kutusu #yeni-talep {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
