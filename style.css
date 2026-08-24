@@ -4236,3 +4236,12 @@ body > #mesaj-kutusu {
 button[type="submit"] {
     margin-bottom: 25px !important;
 }
+
+/* Mesaj kutuları arasındaki güvenli boşluk */
+#received-messages {
+    margin-bottom: 24px !important;
+}
+
+#sent-messages {
+    margin-top: 24px !important;
+}
