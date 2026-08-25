@@ -4554,5 +4554,11 @@ button[type="submit"] {
         font-size: 22px !important;
     }
 
+ /* SOSYAL BUTONLARIN ÜSTÜNDEKİ BEYAZ ALAN */
+.mesaj-sosyal-butonlar {
+    margin-top: 25px !important;
+    padding-top: 25px !important;
+}
+   
    
 
