@@ -4553,10 +4553,6 @@ button[type="submit"] {
     .mesaj-email-kutu a {
         font-size: 22px !important;
     }
-}
 
-#sent-messages-list {
-    min-height: 190px !important;
-    padding-bottom: 20px !important;
-    box-sizing: border-box !important;
-}
+   
+
