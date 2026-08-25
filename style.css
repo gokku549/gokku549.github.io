@@ -4559,6 +4559,15 @@ button[type="submit"] {
     margin-top: 25px !important;
     padding-top: 25px !important;
 }
+
+/* SADECE SON 2 TURUNCU KUTUNUN BOYU */
+#received-messages,
+#sent-messages {
+    min-height: 0 !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    box-sizing: border-box !important;
+}
    
    
 
