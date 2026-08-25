@@ -3931,7 +3931,7 @@ body > #mesaj-kutusu {
 /* Mesaj gönder butonu: 6 kutunun altında, ortada */
 #mesaj-kutusu .mesaj-form-grid .mesaj-gonder {
     grid-column: 1 / -1 !important;
-    width: 55% !important;
+    width: 70% !important;
     max-width: 600px !important;
     justify-self: center !important;
 
