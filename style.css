@@ -4673,3 +4673,12 @@ Yerine bunu koy:
     cursor: pointer !important;
 }
    
+/* 🟣 MOR MESAJ GÖNDER - BİRAZ GENİŞ */
+#mesaj-kutusu #test-mesaj-butonu {
+    width: 70% !important;
+    max-width: 750px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+   
