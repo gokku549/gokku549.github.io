@@ -4682,3 +4682,12 @@ Yerine bunu koy:
     box-sizing: border-box !important;
 }
    
+#mesaj-kutusu .mesaj-form > #test-mesaj-butonu {
+    width: 85% !important;
+    max-width: 850px !important;
+    min-width: 0 !important;
+    display: block !important;
+    margin: 15px auto 28px auto !important;
+    box-sizing: border-box !important;
+}
+   
