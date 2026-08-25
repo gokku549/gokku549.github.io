@@ -4593,3 +4593,26 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
    
+#mesaj-kutusu button#test-mesaj-butonu {
+    width: 430px !important;
+    max-width: calc(100% - 20px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+Tamamını sil.
+
+Yerine bunu koy:
+
+/* MOR MESAJ GÖNDER - SAĞDAN SOLDAN BİRAZ GENİŞ */
+#mesaj-kutusu button#test-mesaj-butonu {
+    display: block !important;
+    width: 500px !important;
+    min-width: 500px !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
