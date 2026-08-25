@@ -4568,5 +4568,18 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
 
+/* E-POSTA ADRESİ - SOSYAL BUTONLAR */
+.mesaj-sosyal-butonlar .email-adres {
+    color: #000000 !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+/* BUTONLAR ARASI MESAFE */
+.mesaj-sosyal-butonlar {
+    gap: 24px !important;
+}
    
 
