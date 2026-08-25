@@ -4513,3 +4513,44 @@ button[type="submit"] {
     margin-top: 30px;
     margin-bottom: 40px;
 }
+
+/* E-POSTA BİLGİ KUTUSU */
+.mesaj-email-kutu {
+    width: 70% !important;
+    max-width: 650px !important;
+    min-height: 120px !important;
+
+    margin: 25px auto 45px !important;
+    padding: 25px 30px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #ffffff !important;
+    border: 4px solid #ff0000 !important;
+    border-radius: 14px !important;
+
+    text-align: center !important;
+}
+
+.mesaj-email-kutu a {
+    color: #000000 !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+}
+
+@media (max-width: 700px) {
+    .mesaj-email-kutu {
+        width: 90% !important;
+        min-height: 105px !important;
+        padding: 20px 15px !important;
+    }
+
+    .mesaj-email-kutu a {
+        font-size: 22px !important;
+    }
+}
