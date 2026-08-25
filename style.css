@@ -4504,3 +4504,12 @@ button[type="submit"] {
     color: #000000;
     text-decoration: none;
 }
+
+.mesaj-email-adres {
+    color: #000 !important;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
