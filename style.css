@@ -4562,6 +4562,13 @@ button[type="submit"] {
     box-sizing: border-box !important;
 }
    
+/* SADECE GELEN + GÖNDERİLEN MESAJ KUTULARI */
+.mesajlar-panel {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-sizing: border-box !important;
+}
+
 
 
    
