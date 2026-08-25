@@ -4617,16 +4617,18 @@ Yerine bunu koy:
     box-sizing: border-box !important;
 }
 
-/* 🟣 MOR MESAJ GÖNDER KUTUSU */
+/* 🟣 MOR KUTU - SAĞDAN VE SOLDAN GENİŞLET */
 #mesaj-kutusu .mesaj-gonder {
-    width: 480px !important;
-    min-width: 480px !important;
-    max-width: 480px !important;
-    box-sizing: border-box !important;
+    width: calc(100% + 40px) !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin-left: -20px !important;
+    margin-right: -20px !important;
 
     padding: 20px 17px !important;
     margin-top: 10px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
     margin-bottom: 28px !important;
+
+    box-sizing: border-box !important;
 }
