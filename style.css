@@ -4582,4 +4582,13 @@ button[type="submit"] {
     gap: 24px !important;
 }
    
+/* SADECE MOR MESAJ GÖNDER BUTONU */
+#mesaj-kutusu .mesaj-gonder {
+    width: 480px !important;
+    max-width: calc(100% - 20px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
 
+   
