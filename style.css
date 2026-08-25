@@ -4554,20 +4554,15 @@ button[type="submit"] {
         font-size: 22px !important;
     }
 
- /* SOSYAL BUTONLARIN ÜSTÜNDEKİ BEYAZ ALAN */
-.mesaj-sosyal-butonlar {
-    margin-top: 25px !important;
-    padding-top: 25px !important;
-}
-
-/* SADECE SON 2 TURUNCU KUTUNUN BOYU */
+ /* SADECE GELEN / GÖNDERİLEN MESAJ KUTULARI */
 #received-messages,
 #sent-messages {
-    min-height: 0 !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
     box-sizing: border-box !important;
 }
    
+
+
    
 
