@@ -1473,41 +1473,44 @@
   </div>
 
   <!-- KATEGORİLER -->
+  
 <div class="mesaj-kategorileri">
 
-    <span class="kategori veli">
+    <button type="button"
+            class="mesaj-kategori veli"
+            onclick="kategoriSec(this, 'Veli')">
         <span class="kategori-logo">👨‍👩‍👧</span> Veli
-    </span>
+    </button>
 
-    <span class="ayrac">·</span>
-
-    <span class="kategori ogrenci">
+    <button type="button"
+            class="mesaj-kategori ogrenci"
+            onclick="kategoriSec(this, 'Öğrenci')">
         <span class="kategori-logo">🎓</span> Öğrenci
-    </span>
+    </button>
 
-    <span class="ayrac">·</span>
-
-    <span class="kategori okul">
+    <button type="button"
+            class="mesaj-kategori okul"
+            onclick="kategoriSec(this, 'Okul')">
         <span class="kategori-logo">🏫</span> Okul
-    </span>
+    </button>
 
-    <span class="ayrac">·</span>
-
-    <span class="kategori ogretmen">
+    <button type="button"
+            class="mesaj-kategori ogretmen"
+            onclick="kategoriSec(this, 'Öğretmen')">
         <span class="kategori-logo">👩‍🏫</span> Öğretmen
-    </span>
+    </button>
 
-    <span class="ayrac">·</span>
-
-    <span class="kategori kurum">
+    <button type="button"
+            class="mesaj-kategori kurum"
+            onclick="kategoriSec(this, 'Kurum')">
         <span class="kategori-logo">🏢</span> Kurum
-    </span>
+    </button>
 
-    <span class="ayrac">·</span>
-
-    <span class="kategori diger">
+    <button type="button"
+            class="mesaj-kategori diger"
+            onclick="kategoriSec(this, 'Diğer')">
         <span class="kategori-logo">💬</span> Diğer
-    </span>
+    </button>
 
 </div>
 
@@ -2022,7 +2025,26 @@ const db = getFirestore(app);
 emailjs.init({
   publicKey: "cKKK8jIyjwnoFT3n2"
 });
+  
+window.kategoriSec = function(buton, kategori) {
 
+  document
+    .querySelectorAll("#mesaj-kutusu .mesaj-kategori")
+    .forEach(function(btn) {
+      btn.classList.remove("secili");
+    });
+
+  buton.classList.add("secili");
+
+  const select =
+    document.getElementById("yeni-iletisim");
+
+  if (select) {
+    select.value = kategori;
+  }
+
+};
+  
 window.yeniMesajGonder = async function(event) {
 
   event.preventDefault();
