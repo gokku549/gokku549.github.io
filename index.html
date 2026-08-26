@@ -2082,30 +2082,43 @@ window.yeniMesajGonder = async function(event) {
 
   try {
 
+    /* 1️⃣ FIRESTORE'A KAYDET */
+
     await addDoc(collection(db, "messages"), {
 
       senderName: adsoyad,
-
       senderEmail: email,
-
       senderPhone: telefon,
-
       category: iletisim,
-
       subject: talep,
-
       text: mesaj,
-
       note: not,
-
       receiverEmail: "esragkacademy@gmail.com",
-
       createdAt: serverTimestamp()
 
     });
 
 
-    alert("✅ Mesajınız başarıyla gönderildi.");
+    /* 2️⃣ EMAILJS İLE E-POSTA GÖNDER */
+
+    await emailjs.send(
+      "service_mjo3ioa",
+      "template_oozerdb",
+      {
+        name: adsoyad,
+        email: email,
+        phone: telefon,
+        category: iletisim,
+        title: talep,
+        message: mesaj,
+        note: not
+      }
+    );
+
+
+    /* 3️⃣ BAŞARILI */
+
+    alert("✅ Mesajınız başarıyla gönderildi ve e-posta adresinize iletildi.");
 
     document.querySelector(".mesaj-form").reset();
 
@@ -2115,7 +2128,7 @@ window.yeniMesajGonder = async function(event) {
     console.error("Mesaj gönderme hatası:", error);
 
     alert(
-      "❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz."
+      "❌ Mesaj kaydedildi ancak e-posta gönderiminde sorun oluştu. Lütfen tekrar deneyiniz."
     );
 
   }
@@ -2125,7 +2138,6 @@ window.yeniMesajGonder = async function(event) {
 
 };
 
- 
 
 const messagesList =
   document.getElementById("messages-list");
