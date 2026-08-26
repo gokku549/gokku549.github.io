@@ -2049,13 +2049,6 @@ window.yeniMesajGonder = async function(event) {
 
   event.preventDefault();
 
-  const user = auth.currentUser;
-
-  if (!user) {
-    alert("Mesaj göndermek için önce giriş yapmalısınız.");
-    return false;
-  }
-
   const adsoyad =
     document.getElementById("yeni-adsoyad").value.trim();
 
@@ -2077,16 +2070,19 @@ window.yeniMesajGonder = async function(event) {
   const not =
     document.getElementById("yeni-not").value.trim();
 
+
   if (!adsoyad || !email || !iletisim || !talep || !mesaj) {
+
     alert("Lütfen zorunlu alanları doldurunuz.");
+
     return false;
+
   }
+
 
   try {
 
     await addDoc(collection(db, "messages"), {
-
-      senderId: user.uid,
 
       senderName: adsoyad,
 
@@ -2108,22 +2104,28 @@ window.yeniMesajGonder = async function(event) {
 
     });
 
+
     alert("✅ Mesajınız başarıyla gönderildi.");
 
     document.querySelector(".mesaj-form").reset();
+
 
   } catch (error) {
 
     console.error("Mesaj gönderme hatası:", error);
 
-    alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz.");
+    alert(
+      "❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz."
+    );
 
   }
+
 
   return false;
 
 };
 
+ 
 
 const messagesList =
   document.getElementById("messages-list");
