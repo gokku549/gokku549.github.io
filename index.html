@@ -1981,12 +1981,14 @@
 
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script type="module">
 
 import {
   initializeApp
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
-
+  
 import {
   getAuth,
   onAuthStateChanged
@@ -2017,17 +2019,13 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+emailjs.init({
+  publicKey: "cKKK8jIyjwnoFT3n2"
+});
 
 window.yeniMesajGonder = async function(event) {
 
   if (event) event.preventDefault();
-
-  const user = auth.currentUser;
-
-  if (!user) {
-    alert("🔐 Mesaj göndermek için önce giriş yapmalısınız.");
-    return false;
-  }
 
   const adSoyad =
     document.getElementById("yeni-adsoyad").value.trim();
@@ -2057,10 +2055,10 @@ window.yeniMesajGonder = async function(event) {
 
   try {
 
-    await addDoc(collection(db,"messages"), {
+   await addDoc(collection(db,"messages"), {
 
-      senderId: user.uid,
-      senderEmail: user.email,
+      senderId: email,
+      senderEmail: email,
       senderName: adSoyad,
       senderPhone: telefon,
 
@@ -2077,8 +2075,16 @@ window.yeniMesajGonder = async function(event) {
 
     });
 
-    alert("✅ Mesajınız başarıyla gönderildi!");
+    await emailjs.send("service_qppry2p", "template_oozerdb", { 
+      name: adSoyad,
+      email: email,
+      title: talep,
+      message: mesaj,
+      time: new Date().toLocaleString("tr-TR")
+    });
 
+    alert("✅ Mesajınız başarıyla gönderildi!"); 
+   
     document.querySelector(".mesaj-form").reset();
 
   } catch(error) {
