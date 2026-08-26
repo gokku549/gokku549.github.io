@@ -2025,9 +2025,16 @@ emailjs.init({
 
 window.yeniMesajGonder = async function(event) {
 
-  if (event) event.preventDefault();
+  event.preventDefault();
 
-  const adSoyad =
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("Mesaj göndermek için önce giriş yapmalısınız.");
+    return false;
+  }
+
+  const adsoyad =
     document.getElementById("yeni-adsoyad").value.trim();
 
   const email =
@@ -2048,73 +2055,50 @@ window.yeniMesajGonder = async function(event) {
   const not =
     document.getElementById("yeni-not").value.trim();
 
-  if (!adSoyad || !email || !iletisim || !talep || !mesaj) {
-    alert("⚠️ Lütfen gerekli alanları doldurun.");
+  if (!adsoyad || !email || !iletisim || !talep || !mesaj) {
+    alert("Lütfen zorunlu alanları doldurunuz.");
     return false;
   }
 
   try {
 
-   await addDoc(collection(db,"messages"), {
+    await addDoc(collection(db, "messages"), {
 
-      senderId: email,
+      senderId: user.uid,
+
+      senderName: adsoyad,
+
       senderEmail: email,
-      senderName: adSoyad,
+
       senderPhone: telefon,
 
-      receiverEmail: "esragkacademy@gmail.com",
-      receiverName: "Yönetici",
-
       category: iletisim,
+
       subject: talep,
+
       text: mesaj,
+
       note: not,
 
-      read: false,
+      receiverEmail: "esragkacademy@gmail.com",
+
       createdAt: serverTimestamp()
 
     });
 
-    await emailjs.send("service_qppry2p", "template_oozerdb", { 
-      name: adSoyad,
-      email: email,
-      title: talep,
-      message: mesaj,
-      time: new Date().toLocaleString("tr-TR")
-    });
+    alert("✅ Mesajınız başarıyla gönderildi.");
 
-    alert("✅ Mesajınız başarıyla gönderildi!"); 
-   
     document.querySelector(".mesaj-form").reset();
 
-  } catch(error) {
+  } catch (error) {
 
-    console.error("Mesaj gönderme hatası:",error);
+    console.error("Mesaj gönderme hatası:", error);
 
-    alert("❌ Mesaj gönderilemedi.\n\n" + error.message);
+    alert("❌ Mesaj gönderilemedi. Lütfen tekrar deneyiniz.");
 
   }
 
   return false;
-};
-
-
-window.mesajKategoriSec = function(buton,kategori) {
-
-  document
-    .querySelectorAll("#mesaj-kutusu .mesaj-kategori")
-    .forEach(function(btn) {
-      btn.classList.remove("secili");
-    });
-
-  buton.classList.add("secili");
-
-  const select =
-    document.getElementById("yeni-iletisim");
-
-  if (select) {
-    select.value = kategori;
-  }
 
 };
 
@@ -2247,7 +2231,6 @@ onAuthStateChanged(auth,(user)=> {
   });
 
 });
-
 
 
   
